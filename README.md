@@ -41,6 +41,11 @@ Welcome to Mo Creatives – a marketing company that elevates your brand with in
 |Tech Grey   | ![#4A4A4A](https://via.placeholder.com/10/303C55?text=+) `#4A4A4A` |
 | Cultural Red         | ![#D72638)](https://via.placeholder.com/10/8892b0?text=+) `#D72638)` |
 
+## Primary  Font
+Open Sans – Easy-to-read body text font.
+Secondary
+Lato
+
 
 
 ## Contributing
