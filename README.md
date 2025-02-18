@@ -39,7 +39,7 @@ Welcome to Mo Creatives – a marketing company that elevates your brand with in
 |Neuro Blue         | ![#3A86FF](https://via.placeholder.com/10/0a192f?text=+) `#3A86FF` |
 | Creative Yellow    | ![#FFD166](https://via.placeholder.com/10/0a192f?text=+) `#FFD166` |
 |Tech Grey   | ![#4A4A4A](https://via.placeholder.com/10/303C55?text=+) `#4A4A4A` |
-| Cultural Red         | ![#D72638)](https://via.placeholder.com/10/8892b0?text=+) `#D72638)` |
+| Cultural Red         | ![#D72638](https://via.placeholder.com/10/8892b0?text=+) `#D72638` |
 
 ## Primary  Font
 Open Sans – Easy-to-read body text font.
