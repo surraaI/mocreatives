@@ -1,0 +1,34 @@
+export default function Home() {
+  return (
+    <section className="relative w-full h-screen overflow-hidden">
+      {/* Background Video */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute top-0 left-0 w-full h-full object-cover"
+      >
+        <source src="/background-video.mp4" type="video/mp4" />
+      </video>
+
+      {/* Dark Overlay */}
+      <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50"></div>
+
+      {/* Content Over Video */}
+      <div className="relative flex flex-col items-center justify-center text-center text-white h-full px-6">
+        <h1 className="text-5xl md:text-7xl font-bold">Welcome to Our World</h1>
+        <p className="text-lg md:text-2xl mt-4 max-w-2xl">
+          Experience innovation like never before. Explore our unique solutions
+          tailored for you.
+        </p>
+        <a
+          href="/services"
+          className="mt-6 px-6 py-3 bg-white text-black font-semibold text-lg rounded-lg hover:bg-gray-300 transition"
+        >
+          Get Started
+        </a>
+      </div>
+    </section>
+  );
+}
