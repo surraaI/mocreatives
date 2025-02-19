@@ -52,9 +52,7 @@ export default function Navigation() {
         overlayProps={{ opacity: 0.5, blur: 2 }}
         position="right"
         hiddenFrom="lg"
-        classNames={{
-          drawer: "bg-black text-white",
-        }}
+        className="bg-cultural-red text-black"
       >
         <ScrollArea>
           <nav className="flex flex-col space-y-4">
