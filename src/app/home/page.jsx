@@ -27,7 +27,7 @@ export default function Home() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          <h1 className="text-5xl md:text-7xl  font-sans">
+          <h1 className="text-5xl md:text-7xl  font-sans pt-10">
             Welcome to Our World
           </h1>
         </motion.div>
