@@ -10,7 +10,7 @@ export default function RootLayout({ children }) {
       <body>
         <MantineProvider>
           <Navigation />
-          <main className="pt-16">{children}</main>{" "}
+          <main className="pt-20">{children}</main>{" "}
         </MantineProvider>
       </body>
     </html>

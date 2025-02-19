@@ -1,25 +1,42 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Drawer, Burger, ScrollArea } from "@mantine/core";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Navigation() {
   const [opened, setOpened] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  // Detect scroll position
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50); // Add effect when scrolled 50px
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <header className="flex justify-between items-center px-6 py-4 bg-white fixed top-0 left-0 w-full z-50 shadow-md">
-      {/* Company Logo (Left) */}
-      <Link href="/">
-        <Image src="/logo.png" alt="Company Logo" width={120} height={40} />
-      </Link>
+    <header
+      className={`fixed top-0 left-0 w-full z-50 px-6 py-4 transition-all duration-300 ${
+        scrolled ? "bg-white shadow-md" : "bg-transparent"
+      }`}
+    >
+      <div className="flex justify-between items-center">
+        {/* Company Logo (Left) */}
+        <Link href="/">
+          <Image src="/logo.png" alt="Company Logo" width={120} height={40} />
+        </Link>
 
-      {/* Hamburger Button (Right) */}
-      <Burger
-        opened={opened}
-        onClick={() => setOpened((o) => !o)}
-        aria-label="Toggle sidebar"
-        className="md:hidden"
-      />
+        {/* Hamburger Button (Right) */}
+        <Burger
+          opened={opened}
+          onClick={() => setOpened((o) => !o)}
+          aria-label="Toggle sidebar"
+          className="md:hidden"
+        />
+      </div>
 
       {/* Sidebar Drawer */}
       <Drawer
@@ -30,7 +47,7 @@ export default function Navigation() {
         size="md"
         withCloseButton
         overlayProps={{ opacity: 0.5, blur: 2 }}
-        hiddenFrom="md" // Hides the drawer on medium+ screens
+        hiddenFrom="md"
       >
         <ScrollArea>
           <nav className="flex flex-col space-y-4">
