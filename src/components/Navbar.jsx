@@ -11,7 +11,12 @@ export default function Navigation() {
     <header className="flex justify-between items-center px-6 py-4 bg-transparent fixed top-0 left-0 w-full z-50">
       {/* Company Logo (Left) */}
       <Link href="/">
-        <Image src="/logo.png" alt="Company Logo" width={120} height={40} />
+        <Image
+          src="/assets/logo.jpg"
+          alt="Company Logo"
+          width={90}
+          height={10}
+        />
       </Link>
 
       {/* Hamburger Button (Visible on all screens) */}
