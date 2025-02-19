@@ -8,7 +8,7 @@ export default function Navigation() {
   const [opened, setOpened] = useState(false);
 
   return (
-    <header className="flex justify-between items-center px-6 py-4 bg-transparent fixed top-0 left-0 w-full z-50">
+    <header className="flex justify-between items-center px-6 py-0  bg-transparent fixed top-0 left-0 w-full z-50">
       {/* Company Logo (Left) */}
       <Link href="/">
         <Image

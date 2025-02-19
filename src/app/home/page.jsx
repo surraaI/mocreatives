@@ -1,7 +1,12 @@
+"use client";
+
+import Link from "next/link";
+import { Button, Container, Text, Title } from "@mantine/core";
+import { motion } from "framer-motion";
+
 export default function Home() {
   return (
     <section className="relative w-full h-screen overflow-hidden">
-      {/* Background Video */}
       <video
         autoPlay
         loop
@@ -17,17 +22,38 @@ export default function Home() {
 
       {/* Content Over Video */}
       <div className="relative flex flex-col items-center justify-center text-center text-white h-full px-6">
-        <h1 className="text-5xl md:text-7xl font-bold">Welcome to Our World</h1>
-        <p className="text-lg md:text-2xl mt-4 max-w-2xl">
-          Experience innovation like never before. Explore our unique solutions
-          tailored for you.
-        </p>
-        <a
-          href="/services"
-          className="mt-6 px-6 py-3 bg-white text-black font-semibold text-lg rounded-lg hover:bg-gray-300 transition"
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
         >
-          Get Started
-        </a>
+          <Title className="text-5xl md:text-7xl font-bold">
+            Welcome to Our World
+          </Title>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 0.2 }}
+        >
+          <Text className="text-lg md:text-2xl mt-4 max-w-2xl">
+            Experience innovation like never before. Explore our unique
+            solutions tailored for you.
+          </Text>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.4 }}
+          className="flex gap-4 mt-6"
+        >
+          <Link
+            href="/services"
+            className="mt-6 px-6 py-3 bg-white text-black font-semibold text-lg rounded-lg hover:bg-gray-300 transition"
+          >
+            Get Started
+          </Link>
+        </motion.div>
       </div>
     </section>
   );
