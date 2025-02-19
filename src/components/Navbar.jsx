@@ -19,7 +19,7 @@ export default function Navigation() {
         opened={opened}
         onClick={() => setOpened((o) => !o)}
         aria-label="Toggle sidebar"
-        className="lg:hidden" // Make it visible on all sizes
+        className="block"
       />
 
       {/* Sidebar Drawer (Appears on the right side) */}
