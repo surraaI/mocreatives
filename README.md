@@ -4,7 +4,7 @@ Welcome to Mo Creatives – a marketing company that elevates your brand with in
 
 ## Tech Stack
 
-- **Frontend**: Next.js, React, Tailwind CSS, MantineUI Framer Motion
+- **Frontend**: Next.js, React, Tailwind CSS, MantineUI, Framer Motion
 - **Backend**: no backend for now 
 - **State Management**: React hooks
 - **Animations**: Framer Motion
