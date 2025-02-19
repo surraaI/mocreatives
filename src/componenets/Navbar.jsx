@@ -3,7 +3,7 @@ import { Drawer, Burger, ScrollArea } from "@mantine/core";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Sidebar() {
+export default function Navigation() {
   const [opened, setOpened] = useState(false);
 
   return (
