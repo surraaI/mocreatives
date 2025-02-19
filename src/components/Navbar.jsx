@@ -17,7 +17,7 @@ export default function Navigation() {
 
   return (
     <header className="flex justify-between items-center px-6 py-0 bg-transparent fixed top-0 left-0 w-full z-50">
-      <Link href="/">
+      <Link href="/" className="-mt-10">
         <Image
           src="/assets/logo.png"
           alt="Company Logo"
@@ -30,7 +30,7 @@ export default function Navigation() {
         opened={opened}
         onClick={() => setOpened((o) => !o)}
         aria-label="Toggle sidebar"
-        className="block"
+        className="block -mt-10 mr-4"
       />
 
       <Drawer
