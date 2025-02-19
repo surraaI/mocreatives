@@ -39,11 +39,14 @@ export default function Navigation() {
           </div>
         }
         padding="md"
-        size="md"
+        size="160px"
         withCloseButton
         overlayProps={{ opacity: 0.5, blur: 2 }}
         position="right"
         hiddenFrom="lg"
+        classNames={{
+          drawer: "bg-cultural-red text-white",
+        }}
       >
         <ScrollArea>
           <nav className="flex flex-col space-y-4">
