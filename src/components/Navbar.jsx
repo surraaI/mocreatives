@@ -58,42 +58,42 @@ export default function Navigation() {
           <nav className="flex flex-col space-y-4">
             <Link
               href="/home"
-              className="p-2 hover:bg-cultural-red rounded-lg flex items-center gap-2"
+              className="p-2 hover:bg-cultural-red rounded-xl flex items-center gap-2"
             >
               <Home size={20} />
               Home
             </Link>
             <Link
               href="/about"
-              className="p-2 hover:bg-cultural-red rounded-lg flex items-center gap-2"
+              className="p-2 hover:bg-cultural-red rounded-xl flex items-center gap-2"
             >
               <Info size={20} />
               About
             </Link>
             <Link
               href="/services"
-              className="p-2 hover:bg-cultural-red rounded-lg flex items-center gap-2"
+              className="p-2 hover:bg-cultural-red rounded-xl flex items-center gap-2"
             >
               <Briefcase size={20} />
               Services
             </Link>
             <Link
               href="/portfolio"
-              className="p-2 hover:bg-cultural-red rounded-lg flex items-center gap-2"
+              className="p-2 hover:bg-cultural-red rounded-xl flex items-center gap-2"
             >
               <LayoutDashboard size={20} />
               Portfolio
             </Link>
             <Link
               href="/blog"
-              className="p-2 hover:bg-cultural-red rounded-lg flex items-center gap-2"
+              className="p-2 hover:bg-cultural-red rounded-xl flex items-center gap-2"
             >
               <BookOpen size={20} />
               Blog
             </Link>
             <Link
               href="/contact"
-              className="p-2 hover:bg-cultural-red rounded-lg flex items-center gap-2"
+              className="p-2 hover:bg-cultural-red rounded-xl flex items-center gap-2"
             >
               <Mail size={20} />
               Contact
