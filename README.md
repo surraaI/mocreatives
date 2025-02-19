@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# MO-Creatives Website
 
-## Getting Started
+Welcome to Mo Creatives – a marketing company that elevates your brand with innovative strategies and stunning design. We create dynamic digital experiences that engage your audience and drive results. Explore our portfolio and let us help you tell your brand’s story.
 
-First, run the development server:
+## Tech Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Frontend**: Next.js, React, Tailwind CSS, Framer Motion
+- **Backend**: no backend for now 
+- **State Management**: React hooks
+- **Animations**: Framer Motion
+- **Icons**: React icons
+- **Deployment**: Vercel
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 🛠 set-up
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Install the dependencies
 
-## Learn More
+   ```sh
+   npm install or yarn
+   ```
+   2. Start the development server
 
-To learn more about Next.js, take a look at the following resources:
+   ```sh
+   yarn run start
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🚀 build and run for production
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Generate a full static production build
 
-## Deploy on Vercel
+   ```sh
+   npm run build
+   ```
+   ## 🎨 color codes
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+| Color          | Hex                                                                |
+| -------------- | ------------------------------------------------------------------ |
+|Neuro Blue         | ![#3A86FF](https://via.placeholder.com/10/0a192f?text=+) `#3A86FF` |
+| Creative Yellow    | ![#FFD166](https://via.placeholder.com/10/0a192f?text=+) `#FFD166` |
+|Tech Grey   | ![#4A4A4A](https://via.placeholder.com/10/303C55?text=+) `#4A4A4A` |
+| Cultural Red         | ![#D72638](https://via.placeholder.com/10/8892b0?text=+) `#D72638` |
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Primary  Font
+Open Sans – Easy-to-read body text font.
+Secondary
+Lato
+
+
+
+## Contributing
+
+Feel free to fork this repository and contribute! If you'd like to report any issues or suggest improvements, please open an issue or a pull request.
