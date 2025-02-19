@@ -9,7 +9,6 @@ export default function Navigation() {
 
   return (
     <header className="flex justify-between items-center px-6 py-0  bg-transparent fixed top-0 left-0 w-full z-50">
-      {/* Company Logo (Left) */}
       <Link href="/">
         <Image
           src="/assets/logo.png"
@@ -19,7 +18,6 @@ export default function Navigation() {
         />
       </Link>
 
-      {/* Hamburger Button (Visible on all screens) */}
       <Burger
         opened={opened}
         onClick={() => setOpened((o) => !o)}
@@ -27,17 +25,25 @@ export default function Navigation() {
         className="block"
       />
 
-      {/* Sidebar Drawer (Appears on the right side) */}
       <Drawer
         opened={opened}
         onClose={() => setOpened(false)}
-        title="Menu"
+        title={
+          <div className="flex items-center gap-2">
+            <Image
+              src="/assets/logo.png"
+              alt="Drawer Logo"
+              width={200}
+              height={80}
+            />
+          </div>
+        }
         padding="md"
         size="md"
         withCloseButton
         overlayProps={{ opacity: 0.5, blur: 2 }}
-        position="right" // Move the drawer to the right
-        hiddenFrom="lg" // Hide the drawer on large and above screens
+        position="right"
+        hiddenFrom="lg"
       >
         <ScrollArea>
           <nav className="flex flex-col space-y-4">
@@ -49,6 +55,12 @@ export default function Navigation() {
             </Link>
             <Link href="/services" className="p-2 hover:bg-gray-200">
               Services
+            </Link>
+            <Link href="/portfolio" className="p-2 hover:bg-gray-200">
+              Portfolio
+            </Link>
+            <Link href="/blog" className="p-2 hover:bg-gray-200">
+              Blog
             </Link>
             <Link href="/contact" className="p-2 hover:bg-gray-200">
               Contact

@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Button, Container, Text, Title } from "@mantine/core";
+
 import { motion } from "framer-motion";
 
 export default function Home() {
