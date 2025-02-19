@@ -53,6 +53,9 @@ export default function Navigation() {
         position="right"
         hiddenFrom="lg"
         className="bg-cultural-red text-black"
+        classNames={{
+          close: "text-black hover:text-cultural-red font-bold", // Change to desired hover color
+        }}
       >
         <ScrollArea>
           <nav className="flex flex-col space-y-4">
