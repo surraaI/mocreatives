@@ -27,7 +27,7 @@ export default function Home() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          <h1 className="text-5xl md:text-7xl font-bold">
+          <h1 className="text-5xl md:text-7xl  font-sans pt-10">
             Welcome to Our World
           </h1>
         </motion.div>
@@ -36,7 +36,7 @@ export default function Home() {
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.2 }}
         >
-          <p className="text-lg md:text-2xl mt-4 max-w-2xl">
+          <p className="text-lg md:text-2xl font-sans mt-4 max-w-2xl">
             Experience innovation like never before. Explore our unique
             solutions tailored for you.
           </p>
@@ -49,7 +49,7 @@ export default function Home() {
         >
           <a
             href="/services"
-            className="mt-6 px-6 py-3 bg-white text-black font-semibold text-lg rounded-lg hover:bg-gray-300 transition"
+            className="mt-6 px-6 py-3 bg-white text-black font-semibold text-lg rounded-2xl hover:bg-gray-300 transition"
           >
             Get Started
           </a>
