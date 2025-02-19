@@ -9,7 +9,7 @@ export default function Home() {
         playsInline
         className="absolute top-0 left-0 w-full h-full object-cover"
       >
-        <source src="/background-video.mp4" type="video/mp4" />
+        <source src="/assets/movid.mp4" type="video/mp4" />
       </video>
 
       {/* Dark Overlay */}
