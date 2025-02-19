@@ -12,10 +12,10 @@ export default function Navigation() {
       {/* Company Logo (Left) */}
       <Link href="/">
         <Image
-          src="/assets/logo.jpg"
+          src="/assets/logo.png"
           alt="Company Logo"
-          width={90}
-          height={10}
+          width={200}
+          height={80}
         />
       </Link>
 
