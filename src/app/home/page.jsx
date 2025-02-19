@@ -27,19 +27,19 @@ export default function Home() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          <Title className="text-5xl md:text-7xl font-bold">
+          <h1 className="text-5xl md:text-7xl font-bold">
             Welcome to Our World
-          </Title>
+          </h1>
         </motion.div>
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.2 }}
         >
-          <Text className="text-lg md:text-2xl mt-4 max-w-2xl">
+          <p className="text-lg md:text-2xl mt-4 max-w-2xl">
             Experience innovation like never before. Explore our unique
             solutions tailored for you.
-          </Text>
+          </p>
         </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -47,12 +47,12 @@ export default function Home() {
           transition={{ duration: 1, delay: 0.4 }}
           className="flex gap-4 mt-6"
         >
-          <Link
+          <a
             href="/services"
             className="mt-6 px-6 py-3 bg-white text-black font-semibold text-lg rounded-lg hover:bg-gray-300 transition"
           >
             Get Started
-          </Link>
+          </a>
         </motion.div>
       </div>
     </section>
