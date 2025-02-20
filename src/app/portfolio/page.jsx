@@ -8,12 +8,12 @@ export default function Portfolio() {
       {/* Left Side - Title and Description */}
       <div className="md:w-1/2 mb-8 md:mb-0">
         <h1 className="text-4xl font-bold text-tangaroa-blue mb-4">
-          My Portfolio
+          Portfolio & Case Studies
         </h1>
         <p className="text-gray-700 text-lg leading-relaxed">
-          Welcome to my portfolio! Here are some of my latest projects,
-          showcasing my skills in front-end development, UI/UX design, and
-          responsive layouts.
+          Mo Creatives has worked with major financial institutions, tech
+          companies, and emerging brands to deliver strategic marketing
+          campaigns and digital solutions.
         </p>
       </div>
 
