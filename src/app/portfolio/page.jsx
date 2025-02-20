@@ -41,13 +41,13 @@ export default function Portfolio() {
       <div className="md:w-1/2 flex justify-center items-center relative">
         {/* Desktop Screen Animation */}
         <motion.div
-          className="w-80 md:w-96 h-48 md:h-56 bg-black rounded-lg shadow-lg relative overflow-hidden"
+          className="w-80 md:w-96 h-48 md:h-56 relative overflow-hidden"
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
           <Image
-            src="/assets/desktop-project.png"
+            src="/assets/desktop.png"
             alt="Desktop Project"
             fill
             className="object-cover rounded-lg"
@@ -56,13 +56,13 @@ export default function Portfolio() {
 
         {/* Phone Screen Animation */}
         <motion.div
-          className="w-28 md:w-32 h-56 md:h-64 bg-black rounded-3xl shadow-lg relative overflow-hidden -ml-10 md:-ml-16 -mt-20 md:-mt-24"
+          className="w-28 md:w-32 h-56 md:h-64 relative overflow-hidden -ml-10 md:-ml-16 -mt-20 md:-mt-24"
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
         >
           <Image
-            src="/assets/phone-project.png"
+            src="/assets/mobile.png"
             alt="Phone Project"
             fill
             className="object-cover rounded-3xl"
