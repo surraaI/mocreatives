@@ -38,35 +38,55 @@ export default function Portfolio() {
       </div>
 
       {/* Right Side - Desktop and Phone Mockups */}
-      <div className="md:w-1/2 flex justify-center items-center relative">
+      <div className="md:w-1/2 flex justify-center items-center relative gap-6">
         {/* Desktop Screen Animation */}
         <motion.div
-          className="w-80 md:w-96 h-48 md:h-56 relative overflow-hidden"
-          initial={{ y: 50, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
+          className="w-[380px] md:w-[500px] h-[260px] md:h-[320px] relative overflow-hidden "
+          initial={{ y: 50, opacity: 0, scale: 0.9 }}
+          animate={{ y: 0, opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
           <Image
-            src="/assets/desktop.png"
-            alt="Desktop Project"
+            src="/assets/desktop1.png"
+            alt="Desktop Mockup"
             fill
-            className="object-cover rounded-lg"
+            className="object-cover "
           />
+          {/* Inner Screen Image */}
+          <motion.div className="absolute inset-0 flex justify-center items-center p-4">
+            <Image
+              src="/assets/project-image.jpg"
+              alt="Project on Desktop"
+              className="w-[85%] h-[85%] object-contain"
+              width={400}
+              height={200}
+            />
+          </motion.div>
         </motion.div>
 
         {/* Phone Screen Animation */}
         <motion.div
-          className="w-28 md:w-32 h-56 md:h-64 relative overflow-hidden -ml-10 md:-ml-16 -mt-20 md:-mt-24"
-          initial={{ y: 50, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
+          className="w-[180px] md:w-[200px] h-[360px] md:h-[420px] relative overflow-hidden "
+          initial={{ y: 50, opacity: 0, scale: 0.9 }}
+          animate={{ y: 0, opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
         >
           <Image
-            src="/assets/mobile.png"
-            alt="Phone Project"
+            src="/assets/mobile1.png"
+            alt="Phone Mockup"
             fill
-            className="object-cover rounded-3xl"
+            className="object-cover"
           />
+          {/* Inner Screen Image */}
+          <motion.div className="absolute inset-0 flex justify-center items-center p-4">
+            <Image
+              src="/assets/project-image.jpg"
+              alt="Project on Phone"
+              className="w-[70%] h-[70%] object-contain"
+              width={200}
+              height={900}
+            />
+          </motion.div>
         </motion.div>
       </div>
     </section>
