@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { Button } from "@mantine/core";
 
 export default function Portfolio() {
   return (
@@ -15,6 +16,11 @@ export default function Portfolio() {
           companies, and emerging brands to deliver strategic marketing
           campaigns and digital solutions.
         </p>
+        <button>
+          <Button color="blue" className="mt-4">
+            View Projects
+          </Button>
+        </button>
       </div>
 
       {/* Right Side - Desktop and Phone Mockups */}
