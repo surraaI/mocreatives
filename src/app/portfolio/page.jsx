@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Button } from "@mantine/core";
+import Link from "next/link";
 
 export default function Portfolio() {
   return (
@@ -11,16 +11,30 @@ export default function Portfolio() {
         <h1 className="text-4xl font-bold text-tangaroa-blue mb-4">
           Portfolio & Case Studies
         </h1>
-        <p className="text-gray-700 text-lg leading-relaxed">
-          Mo Creatives has worked with major financial institutions, tech
-          companies, and emerging brands to deliver strategic marketing
-          campaigns and digital solutions.
-        </p>
-        <button>
-          <Button color="blue" className="mt-4">
-            View Projects
-          </Button>
-        </button>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 0.2 }}
+        >
+          <p className="text-gray-700 text-lg leading-relaxed">
+            Mo Creatives has worked with major financial institutions, tech
+            companies, and emerging brands to deliver strategic marketing
+            campaigns and digital solutions.
+          </p>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.4 }}
+          className="flex gap-4 mt-6"
+        >
+          <Link
+            href="/works"
+            className="mt-6 px-10 py-2 bg-red-900 text-black font-semibold text-lg border border-gray-600 rounded-3xl hover:bg-cultural-red transition"
+          >
+            View our works
+          </Link>
+        </motion.div>
       </div>
 
       {/* Right Side - Desktop and Phone Mockups */}
