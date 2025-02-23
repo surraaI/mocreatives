@@ -95,11 +95,11 @@ const PortfolioTabs = () => {
       <div className="border-t-4 border-cultural-red w-11/12 mx-auto mb-8"></div>
 
       {/* Cards for Active Tab */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 overflow-visible">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 overflow-visible">
         {tabContent[activeTab].map((item, index) => (
           <div
             key={index}
-            className="relative bg-cultural-red rounded-2xl p-4 shadow-lg transition hover:scale-105 flex items-center overflow-visible w-[98%] md:w-[80%] mx-auto"
+            className="relative bg-cultural-red rounded-2xl p-6 shadow-lg transition hover:scale-105 flex items-center overflow-visible w-[98%] md:w-[80%] mx-auto min-h-[220px]"
           >
             {/* Image */}
             <div className="w-1/2 relative -left-12">
