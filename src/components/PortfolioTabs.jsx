@@ -4,7 +4,6 @@ import { useState } from "react";
 import Image from "next/image";
 
 const PortfolioTabs = () => {
-  // State for active tab
   const [activeTab, setActiveTab] = useState("Website Design");
 
   // Data for each tab
