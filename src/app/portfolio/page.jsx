@@ -7,9 +7,9 @@ import PortfolioTabs from "../../components/PortfolioTabs";
 export default function Portfolio() {
   return (
     <>
-      <section className="min-h-screen  bg-tech-grey flex flex-col md:flex-row items-center justify-between px-6 py-12 ">
+      <section className="min-h-screen  bg-cultural-red flex flex-col md:flex-row items-center justify-between px-6 py-12 ">
         <div className=" md:w-1/2 mb-8 md:mb-0 ml-10">
-          <h1 className="text-4xl font-bold text-tangaroa-blue mb-4">
+          <h1 className="text-4xl font-bold text-white mb-4">
             Portfolio & Case Studies
           </h1>
           <motion.div
@@ -17,7 +17,7 @@ export default function Portfolio() {
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.2 }}
           >
-            <p className="text-black text-lg leading-relaxed">
+            <p className="text-white text-lg leading-relaxed">
               Mo Creatives has worked with major financial institutions, tech
               companies, and emerging brands to deliver strategic marketing
               campaigns and digital solutions.
@@ -31,7 +31,7 @@ export default function Portfolio() {
           >
             <Link
               href="/works"
-              className="mt-6 px-10 py-2 bg-red-900 text-black font-semibold text-lg border border-gray-600 rounded-3xl hover:bg-cultural-red transition"
+              className="mt-6 px-10 py-2 bg-black text-white font-semibold text-lg border border-gray-600 rounded-3xl hover:bg-cultural-red transition"
             >
               View our works
             </Link>
