@@ -95,22 +95,26 @@ const PortfolioTabs = () => {
       <div className="border-t-4 border-cultural-red w-11/12 mx-auto mb-8"></div>
 
       {/* Cards for Active Tab */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 overflow-visible">
         {tabContent[activeTab].map((item, index) => (
           <div
             key={index}
-            className="bg-cultural-red rounded-2xl p-4 shadow-lg transition hover:scale-105"
+            className="relative bg-cultural-red rounded-2xl p-4 shadow-lg transition hover:scale-105 flex items-center overflow-visible w-[90%] md:w-[70%] mx-auto"
           >
-            <Image
-              src={item.image}
-              alt={item.title}
-              width={500}
-              height={300}
-              className="rounded-lg"
-            />
-            <div className="mt-4">
-              <h3 className="text-lg font-bold">{item.title}</h3>
-              <p>
+            {/* Image */}
+            <div className="w-1/2 relative -left-12">
+              <Image
+                src={item.image}
+                alt={item.title}
+                width={250}
+                height={180}
+                className="rounded-l-2xl shadow-lg object-cover"
+              />
+            </div>
+            {/* Text Content */}
+            <div className="w-1/2 pl-6">
+              <h3 className="text-xl font-bold">{item.title}</h3>
+              <p className="mt-2">
                 <span className="font-bold">Deliverables:</span>{" "}
                 {item.deliverables}
               </p>
