@@ -83,8 +83,8 @@ const PortfolioTabs = () => {
             key={tab}
             onClick={() => setActiveTab(tab)}
             className={`${
-              activeTab === tab ? "text-custom-orange" : "text-white"
-            } hover:text-[#F5A623] transition`}
+              activeTab === tab ? "text-cultural-red" : "text-white"
+            } hover:text-cultural-red transition`}
           >
             {tab}
           </button>
@@ -92,14 +92,14 @@ const PortfolioTabs = () => {
       </div>
 
       {/* Yellow Line */}
-      <div className="border-t-4 border-custom-orange w-11/12 mx-auto mb-8"></div>
+      <div className="border-t-4 border-cultural-red w-11/12 mx-auto mb-8"></div>
 
       {/* Cards for Active Tab */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {tabContent[activeTab].map((item, index) => (
           <div
             key={index}
-            className="bg-neuro-blue rounded-2xl p-4 shadow-lg transition hover:scale-105"
+            className="bg-cultural-red rounded-2xl p-4 shadow-lg transition hover:scale-105"
           >
             <Image
               src={item.image}
