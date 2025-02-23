@@ -7,8 +7,8 @@ import PortfolioTabs from "../../components/PortfolioTabs";
 export default function Portfolio() {
   return (
     <>
-      <section className="min-h-screen flex flex-col md:flex-row items-center justify-between px-6 py-12 bg-white">
-        <div className="md:w-1/2 mb-8 md:mb-0 ml-10">
+      <section className="min-h-screen  bg-tech-grey flex flex-col md:flex-row items-center justify-between px-6 py-12 ">
+        <div className=" md:w-1/2 mb-8 md:mb-0 ml-10">
           <h1 className="text-4xl font-bold text-tangaroa-blue mb-4">
             Portfolio & Case Studies
           </h1>
@@ -17,7 +17,7 @@ export default function Portfolio() {
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.2 }}
           >
-            <p className="text-gray-700 text-lg leading-relaxed">
+            <p className="text-black text-lg leading-relaxed">
               Mo Creatives has worked with major financial institutions, tech
               companies, and emerging brands to deliver strategic marketing
               campaigns and digital solutions.
@@ -87,7 +87,7 @@ export default function Portfolio() {
         </div>
       </section>
 
-      <section className="bg-tech-grey py-12">
+      <section className="bg-black py-12">
         <div className="container mx-auto">
           <PortfolioTabs />
         </div>
