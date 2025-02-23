@@ -61,7 +61,7 @@ const PortfolioTabs = () => {
   };
 
   return (
-    <section className="bg-[#0A1A3C] text-white py-16 px-4">
+    <section className=" text-white py-16 px-4">
       {/* Navigation Tabs */}
       <div className="flex justify-center space-x-8 text-xl font-bold mb-4">
         {Object.keys(tabContent).map((tab) => (
@@ -69,7 +69,7 @@ const PortfolioTabs = () => {
             key={tab}
             onClick={() => setActiveTab(tab)}
             className={`${
-              activeTab === tab ? "text-[#F5A623]" : "text-white"
+              activeTab === tab ? "text-custom-orange" : "text-white"
             } hover:text-[#F5A623] transition`}
           >
             {tab}
@@ -78,14 +78,14 @@ const PortfolioTabs = () => {
       </div>
 
       {/* Yellow Line */}
-      <div className="border-t-4 border-[#F5A623] w-11/12 mx-auto mb-8"></div>
+      <div className="border-t-4 border-custom-orange w-11/12 mx-auto mb-8"></div>
 
       {/* Cards for Active Tab */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {tabContent[activeTab].map((item, index) => (
           <div
             key={index}
-            className="bg-[#1E3C58] rounded-2xl p-4 shadow-lg transition hover:scale-105"
+            className="bg-neuro-blue rounded-2xl p-4 shadow-lg transition hover:scale-105"
           >
             <Image
               src={item.image}

@@ -87,8 +87,7 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* Integrating ProjectList Component */}
-      <section className="bg-gray-100 py-12">
+      <section className="bg-tech-grey py-12">
         <div className="container mx-auto">
           <PortfolioTabs />
         </div>
