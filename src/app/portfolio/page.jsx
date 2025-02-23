@@ -2,50 +2,9 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { useState } from "react";
-import {
-  Tabs,
-  Container,
-  Grid,
-  Card,
-  Text,
-  Title,
-  Button,
-} from "@mantine/core";
-
-const projects = [
-  {
-    title: "Ambassador Mall",
-    description: "Modern website showcasing stores, events, and promotions.",
-    imageUrl: "/assets/ambassador-mall.png",
-    link: "https://ambassadormall.com",
-    type: "Web Design",
-  },
-  {
-    title: "Admass Travel",
-    description: "Captivating travel website with booking functionalities.",
-    imageUrl: "/assets/admass-travel.png",
-    link: "https://admasstravel.com",
-    type: "App Development",
-  },
-  {
-    title: "Marketing Campaign",
-    description: "Strategic campaign for brand awareness.",
-    imageUrl: "/assets/marketing-campaign.png",
-    link: "https://example.com",
-    type: "Digital Marketing",
-  },
-];
-
-const tabs = ["All", "Web Design", "App Development", "Digital Marketing"];
+import PortfolioTabs from "../../components/PortfolioTabs";
 
 export default function Portfolio() {
-  const [activeTab, setActiveTab] = useState("All");
-  const filteredProjects =
-    activeTab === "All"
-      ? projects
-      : projects.filter((project) => project.type === activeTab);
-
   return (
     <>
       <section className="min-h-screen flex flex-col md:flex-row items-center justify-between px-6 py-12 bg-white">
@@ -78,6 +37,7 @@ export default function Portfolio() {
             </Link>
           </motion.div>
         </div>
+
         <div className="md:w-1/2 flex justify-center items-center relative gap-6">
           <motion.div
             className="w-[380px] md:w-[500px] h-[260px] md:h-[320px] relative overflow-hidden"
@@ -101,6 +61,7 @@ export default function Portfolio() {
               />
             </motion.div>
           </motion.div>
+
           <motion.div
             className="w-[180px] md:w-[200px] h-[360px] md:h-[420px] relative overflow-hidden"
             initial={{ y: 50, opacity: 0, scale: 0.9 }}
@@ -126,77 +87,12 @@ export default function Portfolio() {
         </div>
       </section>
 
-      <Container py="xl">
-        <Title align="center" mb="lg">
-          Our Successful Projects
-        </Title>
-        <Tabs value={activeTab} onTabChange={setActiveTab}>
-          <Tabs.List>
-            {tabs.map((tab, index) => (
-              <Tabs.Tab
-                key={index}
-                value={tab}
-                style={{
-                  position: "relative",
-                  fontWeight: activeTab === tab ? "bold" : "normal",
-                  color: activeTab === tab ? "#306590" : "black",
-                }}
-              >
-                {tab}
-                {activeTab === tab && (
-                  <span
-                    style={{
-                      position: "absolute",
-                      bottom: "-6px",
-                      left: "50%",
-                      transform: "translateX(-50%)",
-                      width: 0,
-                      height: 0,
-                      borderLeft: "6px solid transparent",
-                      borderRight: "6px solid transparent",
-                      borderTop: "6px solid #306590",
-                    }}
-                  ></span>
-                )}
-              </Tabs.Tab>
-            ))}
-          </Tabs.List>
-          <Grid mt="md">
-            {filteredProjects.map((project, index) => (
-              <Grid.Col key={index} md={6} lg={4}>
-                <Card shadow="sm" padding="lg" radius="md" withBorder>
-                  <Card.Section>
-                    <Image
-                      src={project.imageUrl}
-                      alt={project.title}
-                      height={200}
-                      width={350}
-                      className="object-cover"
-                    />
-                  </Card.Section>
-                  <Title order={4} mt="sm">
-                    {project.title}
-                  </Title>
-                  <Text color="dimmed" size="sm" mt="xs">
-                    {project.description}
-                  </Text>
-                  <Link href={project.link} passHref>
-                    <Button
-                      component="a"
-                      variant="light"
-                      color="blue"
-                      mt="md"
-                      fullWidth
-                    >
-                      View Project
-                    </Button>
-                  </Link>
-                </Card>
-              </Grid.Col>
-            ))}
-          </Grid>
-        </Tabs>
-      </Container>
+      {/* Integrating ProjectList Component */}
+      <section className="bg-gray-100 py-12">
+        <div className="container mx-auto">
+          <PortfolioTabs />
+        </div>
+      </section>
     </>
   );
 }
