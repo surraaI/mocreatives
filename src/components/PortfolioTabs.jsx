@@ -102,12 +102,12 @@ const PortfolioTabs = () => {
             className="relative bg-cultural-red rounded-2xl p-6 shadow-lg transition hover:scale-105 flex items-center overflow-visible w-[98%] md:w-[80%] mx-auto min-h-[220px]"
           >
             {/* Image */}
-            <div className="w-1/2 relative -left-12">
+            <div className="w-[60%] relative -left-10">
               <Image
                 src={item.image}
                 alt={item.title}
-                width={250}
-                height={180}
+                width={400}
+                height={250}
                 className="rounded-l-2xl shadow-lg object-cover"
               />
             </div>
