@@ -20,12 +20,27 @@ const PortfolioTabs = () => {
         deliverables: "Custom booking system with UI/UX design.",
         image: "/images/website-design-2.png",
       },
+      {
+        title: "Client: HealthCare Plus",
+        deliverables: "Custom booking system with UI/UX design.",
+        image: "/images/website-design-2.png",
+      },
+      {
+        title: "Client: HealthCare Plus",
+        deliverables: "Custom booking system with UI/UX design.",
+        image: "/images/website-design-2.png",
+      },
     ],
     "Brand Identity": [
       {
         title: "Client: UrbanStyle",
         deliverables: "Logo design and brand guidelines.",
         image: "/images/brand-identity-1.png",
+      },
+      {
+        title: "Client: FreshBites",
+        deliverables: "Packaging design and social media assets.",
+        image: "/images/brand-identity-2.png",
       },
       {
         title: "Client: FreshBites",
