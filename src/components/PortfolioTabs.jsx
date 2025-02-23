@@ -99,7 +99,7 @@ const PortfolioTabs = () => {
         {tabContent[activeTab].map((item, index) => (
           <div
             key={index}
-            className="relative bg-cultural-red rounded-2xl p-6 shadow-lg transition hover:scale-105 flex items-center overflow-visible w-[98%] md:w-[80%] mx-auto min-h-[220px]"
+            className="relative bg-cultural-red rounded-2xl p-6 shadow-lg transition hover:scale-105 flex items-center overflow-visible w-[95%]  mx-auto min-h-[280px]"
           >
             {/* Image */}
             <div className="w-[60%] relative -left-10">
