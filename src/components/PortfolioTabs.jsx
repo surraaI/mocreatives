@@ -79,7 +79,7 @@ const PortfolioTabs = () => {
       </div>
 
       {/* Yellow Line */}
-      <div className="border-t-4 border-cultural-red w-11/12 mx-auto mb-8"></div>
+      <div className="border-t-4 border-cultural-red w-7/12  mx-auto mb-8"></div>
 
       {/* Cards for Active Tab */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 overflow-visible">
