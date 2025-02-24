@@ -71,6 +71,11 @@ const PortfolioTabs = () => {
         deliverables: "Affiliate program system and e-commerce integration.",
         image: "/images/ecommerce-2.png",
       },
+      {
+        title: "Client: 2Jar Market",
+        deliverables: "Affiliate program system and e-commerce integration.",
+        image: "/images/ecommerce-2.png",
+      },
     ],
   };
 
