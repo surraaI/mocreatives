@@ -1,9 +1,14 @@
 "use client";
 import { Grid, Text, List } from "@mantine/core";
-import { BrandLinkedin, BrandTwitter, BrandFacebook, BrandInstagram } from "tabler-icons-react";
+import {
+  BrandLinkedin,
+  BrandTwitter,
+  BrandFacebook,
+  BrandInstagram,
+} from "tabler-icons-react";
 import Image from "next/image";
 
-export function Footer() {
+export default function Footer() {
   return (
     <footer className="bg-[#0a0a0a] border-t border-[#ffffff10] w-full">
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -13,9 +18,12 @@ export function Footer() {
             <Grid>
               {/* Marketing Services */}
               <Grid.Col span={{ base: 12, md: 4 }}>
-              <Text style={{ color: "#FFFFFF" }} className="font-bold mb-6 text-lg uppercase tracking-wide">
-                Marketing Services
-              </Text>
+                <Text
+                  style={{ color: "#FFFFFF" }}
+                  className="font-bold mb-6 text-lg uppercase tracking-wide"
+                >
+                  Marketing Services
+                </Text>
 
                 <List spacing="xs" center>
                   <List.Item className="text-gray-400 text-sm hover:text-white transition-colors">
@@ -38,10 +46,13 @@ export function Footer() {
 
               {/* Training Services */}
               <Grid.Col span={{ base: 12, md: 4 }}>
-              <Text style={{ color: "#FFFFFF" }} className="font-bold mb-6 text-lg uppercase tracking-wide">
-               Training Services
-              </Text>
-            
+                <Text
+                  style={{ color: "#FFFFFF" }}
+                  className="font-bold mb-6 text-lg uppercase tracking-wide"
+                >
+                  Training Services
+                </Text>
+
                 <List spacing="xs" center>
                   <List.Item className="text-gray-400 text-sm hover:text-white transition-colors">
                     Corporate & Business Training
@@ -63,10 +74,13 @@ export function Footer() {
 
               {/* Digital Solutions */}
               <Grid.Col span={{ base: 12, md: 4 }}>
-              <Text style={{ color: "#FFFFFF" }} className="font-bold mb-6 text-lg uppercase tracking-wide">
-               Digital Solutions
-              </Text>
-              
+                <Text
+                  style={{ color: "#FFFFFF" }}
+                  className="font-bold mb-6 text-lg uppercase tracking-wide"
+                >
+                  Digital Solutions
+                </Text>
+
                 <List spacing="xs" center>
                   <List.Item className="text-gray-400 text-sm hover:text-white transition-colors">
                     Website Design & Development
@@ -89,7 +103,10 @@ export function Footer() {
           </Grid.Col>
 
           {/* Professional Image */}
-          <Grid.Col span={{ base: 12, lg: 4 }} className="lg:flex lg:justify-end">
+          <Grid.Col
+            span={{ base: 12, lg: 4 }}
+            className="lg:flex lg:justify-end"
+          >
             <div className="relative h-80 w-full lg:w-[400px] rounded-xl overflow-hidden border-2 border-cultural-red/20">
               <Image
                 src="/assets/professional.jpg"
@@ -113,22 +130,25 @@ export function Footer() {
 
         {/* Social Icons */}
         <div className="flex justify-center gap-6">
-          {[BrandLinkedin, BrandTwitter, BrandFacebook, BrandInstagram].map((Icon, index) => (
-            <button
-              key={index}
-              className="w-12 h-12 rounded-full bg-[#ffffff10] flex items-center justify-center
+          {[BrandLinkedin, BrandTwitter, BrandFacebook, BrandInstagram].map(
+            (Icon, index) => (
+              <button
+                key={index}
+                className="w-12 h-12 rounded-full bg-[#ffffff10] flex items-center justify-center
                        hover:bg-cultural-red transition-all duration-300"
-            >
-              <Icon size={24} className="text-white" />
-            </button>
-          ))}
+              >
+                <Icon size={24} className="text-white" />
+              </button>
+            )
+          )}
         </div>
       </div>
 
       {/* Copyright */}
       <div className="bg-black py-4 w-full mt-8">
         <Text className="text-center text-sm text-gray-500">
-          © 2024 NexGen Solutions. All rights reserved. | Privacy Policy | Terms of Service
+          © 2024 NexGen Solutions. All rights reserved. | Privacy Policy | Terms
+          of Service
         </Text>
       </div>
     </footer>

@@ -2,6 +2,7 @@ import "./globals.css";
 import { MantineProvider } from "@mantine/core";
 import "@mantine/core/styles.css";
 import Navigation from "../components/Navbar";
+import Footer from "../components/footer";
 
 export default function RootLayout({ children }) {
   return (
@@ -10,7 +11,7 @@ export default function RootLayout({ children }) {
       <body>
         <MantineProvider>
           <Navigation />
-          <main>{children}</main>{" "}
+          <main>{children}</main> <Footer />
         </MantineProvider>
       </body>
     </html>
