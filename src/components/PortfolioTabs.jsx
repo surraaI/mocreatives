@@ -100,7 +100,7 @@ const PortfolioTabs = () => {
             </div>
             {/* Text Content */}
             <div className="w-1/2 pl-6">
-              <h3 className="text-xl font-bold">{item.title}</h3>
+              <h3 className="text-md font-bold">{item.title}</h3>
               <p className="mt-2">
                 <span className="font-bold">Deliverables:</span>{" "}
                 {item.deliverables}
