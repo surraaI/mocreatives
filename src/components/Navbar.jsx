@@ -1,8 +1,9 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Drawer, Burger, ScrollArea } from "@mantine/core";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import {
   Home,
   Info,
@@ -14,9 +15,14 @@ import {
 
 export default function Navigation() {
   const [opened, setOpened] = useState(false);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    setOpened(false);
+  }, [pathname]);
 
   return (
-    <header className="flex justify-between items-center px-6 py-0 bg-transparent  fixed top-0 left-0 w-full z-50">
+    <header className="flex justify-between items-center px-6 py-0 bg-transparent fixed top-0 left-0 w-full z-50">
       <Link href="/" className="-mt-10">
         <Image
           src="/assets/logo.png"
@@ -51,9 +57,10 @@ export default function Navigation() {
         withCloseButton
         overlayProps={{ opacity: 0.5, blur: 2 }}
         position="right"
+        hiddenFrom="xl"
         className="bg-cultural-red text-black"
         classNames={{
-          close: "text-black hover:text-cultural-red font-bold", // Change to desired hover color
+          close: "text-black hover:text-cultural-red font-bold",
         }}
       >
         <ScrollArea>
