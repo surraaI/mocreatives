@@ -15,13 +15,13 @@ const PortfolioTabs = () => {
         image: "/assets/mall.jpg",
       },
       {
-        title: "Client: HealthCare Plus",
-        deliverables: "Custom booking system with UI/UX design.",
+        title: "Client: Cooperative Bank of Oromia",
+        deliverables: "New Year TVC Campaign",
         image: "/images/website-design-2.png",
       },
       {
-        title: "Client: HealthCare Plus",
-        deliverables: "Custom booking system with UI/UX design.",
+        title: "Client: DIGAF Microfinance Institution (MFI) ",
+        deliverables: "Marketing & Branding Support",
         image: "/images/website-design-2.png",
       },
       {
@@ -49,8 +49,8 @@ const PortfolioTabs = () => {
     ],
     "Digital Solutions": [
       {
-        title: "Client: FitLife Gym",
-        deliverables: "Social media marketing and ad campaigns.",
+        title: "Client: Ease Engineering",
+        deliverables: "Brand & Digital Solutions.",
         image: "/images/digital-marketing-1.png",
       },
       {
