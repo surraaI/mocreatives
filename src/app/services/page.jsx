@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { Title, Text, Container, Grid, List, Button } from "@mantine/core";
 import { motion } from "framer-motion";
 import { ChevronRight } from "lucide-react";
@@ -40,6 +41,18 @@ const services = [
 ];
 
 export default function ServicesPage() {
+  const [floatingElements, setFloatingElements] = useState([]);
+
+  // Generate random floating elements on client-side only
+  useEffect(() => {
+    const elements = [...Array(20)].map(() => ({
+      background: Math.random() > 0.5 ? "#FFD166" : "#3A86FF",
+      left: `${Math.random() * 100}%`,
+      top: `${Math.random() * 100}%`,
+    }));
+    setFloatingElements(elements);
+  }, []);
+
   return (
     <div className="min-h-screen bg-tech-grey">
       {/* Hero Section */}
@@ -47,14 +60,14 @@ export default function ServicesPage() {
         <div className="absolute inset-0 bg-[url('/assets/grid-pattern.svg')] opacity-10 mix-blend-overlay" />
 
         {/* Floating Elements */}
-        {[...Array(20)].map((_, i) => (
+        {floatingElements.map((element, i) => (
           <motion.div
             key={i}
             className="absolute w-2 h-2 rounded-full"
             style={{
-              background: Math.random() > 0.5 ? "#FFD166" : "#3A86FF",
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
+              background: element.background,
+              left: element.left,
+              top: element.top,
             }}
             initial={{ y: 0, opacity: 0, scale: 0 }}
             animate={{
