@@ -51,7 +51,6 @@ export default function Navigation() {
         withCloseButton
         overlayProps={{ opacity: 0.5, blur: 2 }}
         position="right"
-        hiddenFrom="lg"
         className="bg-cultural-red text-black"
         classNames={{
           close: "text-black hover:text-cultural-red font-bold", // Change to desired hover color
