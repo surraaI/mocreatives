@@ -97,7 +97,7 @@ const PortfolioTabs = () => {
             </p>
           </div>
           {/* Contact Button */}
-          <div className="w-1/5 text-right">
+          <div className="w-1/5 text-bottom">
             <button className="px-6 py-2 bg-blue-600 text-white font-semibold rounded-full hover:bg-blue-700 transition">
               Contact Us
             </button>
