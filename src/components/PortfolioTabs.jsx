@@ -85,7 +85,7 @@ const PortfolioTabs = () => {
       </div>
 
       {/* Description and Contact Button */}
-      <div className="flex justify-between items-end mb-8">
+      <div className="flex justify-between items-end mb-4">
         {/* Description */}
         <div className="w-3/4">
           <p className="text-xl text-tech-grey">
