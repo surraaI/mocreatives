@@ -50,7 +50,6 @@ const PortfolioTabs = () => {
       },
       {
         title: "FreshBites",
-
         deliverables: "Packaging design and social media assets.",
         image: "/images/brand-identity-2.png",
       },
@@ -58,7 +57,6 @@ const PortfolioTabs = () => {
     "Digital Solutions": [
       {
         title: "Ease Engineering",
-
         deliverables: "Brand & Digital Solutions.",
         image: "/images/digital-marketing-1.png",
       },
