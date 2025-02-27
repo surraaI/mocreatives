@@ -76,13 +76,13 @@ const PortfolioTabs = ()=>{
         ]
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-        className: " text-white py-16 px-4",
+        className: " text-tech-grey py-16 px-4",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "flex justify-center space-x-24 text-xl font-bold mb-4",
                 children: Object.keys(tabContent).map((tab)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                         onClick: ()=>setActiveTab(tab),
-                        className: `${activeTab === tab ? "text-cultural-red" : "text-white"} hover:text-cultural-red transition`,
+                        className: `${activeTab === tab ? "text-black" : "text-tech-grey"} hover:text-black transition`,
                         children: tab
                     }, tab, false, {
                         fileName: "[project]/src/components/PortfolioTabs.jsx",
@@ -95,7 +95,7 @@ const PortfolioTabs = ()=>{
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "border-t-4 border-cultural-red w-7/12  mx-auto mb-8"
+                className: "border-t-4 border-tech-grey  w-7/12  mx-auto mb-8"
             }, void 0, false, {
                 fileName: "[project]/src/components/PortfolioTabs.jsx",
                 lineNumber: 92,
@@ -116,7 +116,7 @@ const PortfolioTabs = ()=>{
                             duration: 1
                         },
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "relative bg-cultural-red rounded-2xl p-6 shadow-lg hover:shadow-neuro-blue transition hover:scale-105 flex items-center overflow-visible w-[95%]  mx-auto min-h-[280px]",
+                            className: "relative bg-tech-grey  rounded-2xl p-6 shadow-lg hover:shadow-black transition hover:scale-105 flex items-center overflow-visible w-[95%]  mx-auto min-h-[280px]",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "w-[60%] relative -left-10",
@@ -140,10 +140,10 @@ const PortfolioTabs = ()=>{
                                     className: "w-1/2 pl-6",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                            className: "text-md font-sans",
+                                            className: "text-md text-white",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                    className: "font-bold",
+                                                    className: "font-bold text-white",
                                                     children: "Client:"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/PortfolioTabs.jsx",
@@ -159,14 +159,14 @@ const PortfolioTabs = ()=>{
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                            className: "mt-2 font-sans",
+                                            className: "mt-2 font-sans text-white",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                    className: "font-bold",
+                                                    className: "font-bold text-white",
                                                     children: "Deliverables:"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/PortfolioTabs.jsx",
-                                                    lineNumber: 122,
+                                                    lineNumber: 123,
                                                     columnNumber: 19
                                                 }, this),
                                                 " ",
@@ -174,7 +174,7 @@ const PortfolioTabs = ()=>{
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/PortfolioTabs.jsx",
-                                            lineNumber: 121,
+                                            lineNumber: 122,
                                             columnNumber: 17
                                         }, this)
                                     ]
@@ -428,7 +428,7 @@ function Portfolio() {
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-                className: "bg-black py-12",
+                className: "bg-white py-12",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "container mx-auto",
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$PortfolioTabs$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {

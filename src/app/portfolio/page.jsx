@@ -87,7 +87,7 @@ export default function Portfolio() {
         </div>
       </section>
 
-      <section className="bg-black py-12">
+      <section className="bg-white py-12">
         <div className="container mx-auto">
           <PortfolioTabs />
         </div>

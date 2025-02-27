@@ -72,7 +72,7 @@ const PortfolioTabs = () => {
   };
 
   return (
-    <section className=" text-white py-16 px-4">
+    <section className=" text-tech-grey py-16 px-4">
       {/* Navigation Tabs */}
       <div className="flex justify-center space-x-24 text-xl font-bold mb-4">
         {Object.keys(tabContent).map((tab) => (
@@ -80,16 +80,16 @@ const PortfolioTabs = () => {
             key={tab}
             onClick={() => setActiveTab(tab)}
             className={`${
-              activeTab === tab ? "text-cultural-red" : "text-white"
-            } hover:text-cultural-red transition`}
+              activeTab === tab ? "text-black" : "text-tech-grey"
+            } hover:text-black transition`}
           >
             {tab}
           </button>
         ))}
       </div>
 
-      {/* Yellow Line */}
-      <div className="border-t-4 border-cultural-red w-7/12  mx-auto mb-8"></div>
+      {/*  Line */}
+      <div className="border-t-4 border-tech-grey  w-7/12  mx-auto mb-8"></div>
 
       {/* Cards for Active Tab */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 overflow-visible">
@@ -101,7 +101,7 @@ const PortfolioTabs = () => {
           >
             <div
               key={index}
-              className="relative bg-cultural-red rounded-2xl p-6 shadow-lg hover:shadow-neuro-blue transition hover:scale-105 flex items-center overflow-visible w-[95%]  mx-auto min-h-[280px]"
+              className="relative bg-tech-grey  rounded-2xl p-6 shadow-lg hover:shadow-black transition hover:scale-105 flex items-center overflow-visible w-[95%]  mx-auto min-h-[280px]"
             >
               {/* Image */}
               <div className="w-[60%] relative -left-10">
@@ -115,11 +115,12 @@ const PortfolioTabs = () => {
               </div>
               {/* Text Content */}
               <div className="w-1/2 pl-6">
-                <h3 className="text-md font-sans">
-                  <span className="font-bold">Client:</span> {item.title}
+                <h3 className="text-md text-white">
+                  <span className="font-bold text-white">Client:</span>{" "}
+                  {item.title}
                 </h3>
-                <p className="mt-2 font-sans">
-                  <span className="font-bold">Deliverables:</span>{" "}
+                <p className="mt-2 font-sans text-white">
+                  <span className="font-bold text-white">Deliverables:</span>{" "}
                   {item.deliverables}
                 </p>
               </div>
