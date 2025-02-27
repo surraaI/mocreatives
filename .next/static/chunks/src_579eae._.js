@@ -238,13 +238,13 @@ function Portfolio() {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-                className: "min-h-screen  bg-cultural-red flex flex-col md:flex-row items-center justify-between px-6 py-12 ",
+                className: "min-h-screen  bg-light-gray flex flex-col md:flex-row items-center justify-between px-6 py-12 ",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: " md:w-1/2 mb-8 md:mb-0 ml-10",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                                className: "text-4xl font-bold text-white mb-4",
+                                className: "text-4xl font-bold text-cultural-red mb-4",
                                 children: "Portfolio & Case Studies"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/portfolio/page.jsx",
@@ -263,7 +263,7 @@ function Portfolio() {
                                     delay: 0.2
                                 },
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                    className: "text-white text-lg leading-relaxed",
+                                    className: "text-tech-grey font-sans text-lg leading-relaxed",
                                     children: "Mo Creatives has worked with major financial institutions, tech companies, and emerging brands to deliver strategic marketing campaigns and digital solutions."
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/portfolio/page.jsx",

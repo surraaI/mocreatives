@@ -18,6 +18,7 @@ export default {
         "cultural-red": "#D72638",
         "custom-orange": "#FFA500",
         black: "#000000",
+        "light-gray": "#F5F5F5",
       },
     },
   },
