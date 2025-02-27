@@ -77,9 +77,9 @@ const PortfolioTabs = () => {
       </div>
 
       {/* Line with Triangle */}
-      <div className="relative w-7/12 mx-auto mb-8 border-t-2 border-yellow-500">
+      <div className="relative w-7/12 mx-auto mb-8 border-t-2 border-tech-grey">
         <div
-          className="absolute transform -translate-x-1/2 -top-3 w-0 h-0 border-l-4 border-r-4 border-b-4 border-transparent border-b-yellow-500 transition-all duration-300"
+          className="absolute transform -translate-x-1/2 -top-3 w-0 h-0 border-l-8 border-r-8 border-b-8 border-transparent border-b-tech-grey transition-all duration-300"
           style={{ left: `${(100 / tabs.length) * (activeIndex + 0.5)}%` }} // Dynamic position
         ></div>
       </div>
