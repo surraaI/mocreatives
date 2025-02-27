@@ -85,20 +85,23 @@ const PortfolioTabs = () => {
       </div>
 
       {/* Description and Contact Button */}
-      <div className="flex justify-between items-end mb-4 px-40">
-        {/* Description */}
-        <div className="w-3/4">
-          <p className="text-xl text-tech-grey font-sans">
-            We deliver innovative and impactful results tailored to each
-            client's needs. Explore our work and get in touch to take your brand
-            to the next level.
-          </p>
-        </div>
-        {/* Contact Button */}
-        <div className="w-1/4 text-right">
-          <button className="px-6 py-2 bg-blue-600 text-white font-semibold rounded-full hover:bg-blue-700 transition">
-            Contact Us
-          </button>
+      <div className="flex justify-start mb-4 w-full px-44">
+        {/* Description and Button in the same div with 3/4 width */}
+        <div className="flex w-3/4">
+          {/* Description */}
+          <div className="w-4/5 pr-4">
+            <p className="text-xl text-tech-grey font-sans leading-relaxed">
+              We deliver innovative and impactful results tailored to each
+              client's needs. Explore our work and get in touch to take your
+              brand to the next level.
+            </p>
+          </div>
+          {/* Contact Button */}
+          <div className="w-1/5 text-right">
+            <button className="px-6 py-2 bg-blue-600 text-white font-semibold rounded-full hover:bg-blue-700 transition">
+              Contact Us
+            </button>
+          </div>
         </div>
       </div>
 
