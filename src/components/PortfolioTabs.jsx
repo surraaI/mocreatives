@@ -5,32 +5,26 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 const PortfolioTabs = () => {
-  const [activeTab, setActiveTab] = useState("Marketing");
-
   // Data for each tab
   const tabContent = {
     Marketing: [
       {
         title: "Oromia Insurance Company (OIC)",
-
-        deliverables: " Rebranding TV Commercial (TVC)",
+        deliverables: "Rebranding TV Commercial (TVC)",
         image: "/assets/mall.jpg",
       },
       {
         title: "Cooperative Bank of Oromia",
-
         deliverables: "New Year TVC Campaign",
         image: "/images/website-design-2.png",
       },
       {
-        title: "DIGAF Microfinance Institution (MFI) ",
-
+        title: "DIGAF Microfinance Institution (MFI)",
         deliverables: "Marketing & Branding Support",
         image: "/images/website-design-2.png",
       },
       {
         title: "HealthCare Plus",
-
         deliverables: "Custom booking system with UI/UX design.",
         image: "/images/website-design-2.png",
       },
@@ -38,15 +32,8 @@ const PortfolioTabs = () => {
     "Training & Consulting": [
       {
         title: "UrbanStyle",
-
         deliverables: "Logo design and brand guidelines.",
         image: "/images/brand-identity-1.png",
-      },
-      {
-        title: "FreshBites",
-
-        deliverables: "Packaging design and social media assets.",
-        image: "/images/brand-identity-2.png",
       },
       {
         title: "FreshBites",
@@ -68,11 +55,15 @@ const PortfolioTabs = () => {
     ],
   };
 
+  const [activeTab, setActiveTab] = useState("Marketing");
+  const tabs = Object.keys(tabContent); // Get keys of tabContent
+  const activeIndex = tabs.indexOf(activeTab); // Track active tab index
+
   return (
-    <section className=" text-tech-grey py-16 px-4">
+    <section className="text-tech-grey py-16 px-4">
       {/* Navigation Tabs */}
       <div className="flex justify-center space-x-24 text-xl font-bold mb-4">
-        {Object.keys(tabContent).map((tab) => (
+        {tabs.map((tab) => (
           <button
             key={tab}
             onClick={() => setActiveTab(tab)}
@@ -85,21 +76,24 @@ const PortfolioTabs = () => {
         ))}
       </div>
 
-      {/*  Line */}
-      <div className="border-t-4 border-tech-grey  w-7/12  mx-auto mb-8"></div>
+      {/* Line with Triangle */}
+      <div className="relative w-7/12 mx-auto mb-8 border-t-2 border-yellow-500">
+        <div
+          className="absolute transform -translate-x-1/2 -top-3 w-0 h-0 border-l-4 border-r-4 border-b-4 border-transparent border-b-yellow-500 transition-all duration-300"
+          style={{ left: `${(100 / tabs.length) * (activeIndex + 0.5)}%` }} // Dynamic position
+        ></div>
+      </div>
 
       {/* Cards for Active Tab */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 overflow-visible">
         {tabContent[activeTab].map((item, index) => (
           <motion.div
+            key={index}
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            <div
-              key={index}
-              className="relative bg-tech-grey  rounded-2xl p-6 shadow-lg hover:shadow-black transition hover:scale-105 flex items-center overflow-visible w-[95%]  mx-auto min-h-[280px]"
-            >
+            <div className="relative bg-tech-grey rounded-2xl p-6 shadow-lg hover:shadow-black transition hover:scale-105 flex items-center overflow-visible w-[95%] mx-auto min-h-[280px]">
               {/* Image */}
               <div className="w-[60%] relative -left-10">
                 <Image
