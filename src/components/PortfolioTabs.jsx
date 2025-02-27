@@ -85,13 +85,14 @@ const PortfolioTabs = () => {
       </div>
 
       {/* Description and Contact Button */}
-      <div className="flex justify-between items-center mb-8 px-32">
+      <div className="flex justify-between items-end mb-8">
         {/* Description */}
         <div className="w-3/4">
           <p className="text-xl text-tech-grey">
-            We deliver innovative and impactful results tailored to each
-            client's needs. Explore our work and get in touch to take your brand
-            to the next level.
+            Discover our various services that cover Marketing, Training &
+            Consulting, and Digital Solutions. We deliver innovative and
+            impactful results tailored to each client's needs. Explore our work
+            and get in touch to take your brand to the next level.
           </p>
         </div>
         {/* Contact Button */}
