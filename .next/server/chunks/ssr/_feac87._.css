@@ -715,23 +715,13 @@ img, video {
   border-color: #d7263833;
 }
 
-.border-gray-600 {
+.border-tech-grey {
   --tw-border-opacity: 1;
-  border-color: rgb(75 85 99 / var(--tw-border-opacity, 1));
+  border-color: rgb(74 74 74 / var(--tw-border-opacity, 1));
 }
 
 .border-transparent {
   border-color: #0000;
-}
-
-.border-neuro-blue {
-  --tw-border-opacity: 1;
-  border-color: rgb(58 134 255 / var(--tw-border-opacity, 1));
-}
-
-.border-tech-grey {
-  --tw-border-opacity: 1;
-  border-color: rgb(74 74 74 / var(--tw-border-opacity, 1));
 }
 
 .bg-\[\#0a0a0a\] {
@@ -762,6 +752,11 @@ img, video {
   background-color: rgb(215 38 56 / var(--tw-bg-opacity, 1));
 }
 
+.bg-light-gray {
+  --tw-bg-opacity: 1;
+  background-color: rgb(245 245 245 / var(--tw-bg-opacity, 1));
+}
+
 .bg-neuro-blue {
   --tw-bg-opacity: 1;
   background-color: rgb(58 134 255 / var(--tw-bg-opacity, 1));
@@ -779,11 +774,6 @@ img, video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
-}
-
-.bg-light-gray {
-  --tw-bg-opacity: 1;
-  background-color: rgb(245 245 245 / var(--tw-bg-opacity, 1));
 }
 
 .bg-opacity-50 {
@@ -1017,14 +1007,14 @@ img, video {
   color: rgb(58 134 255 / var(--tw-text-opacity, 1));
 }
 
-.text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
-}
-
 .text-tech-grey {
   --tw-text-opacity: 1;
   color: rgb(74 74 74 / var(--tw-text-opacity, 1));
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
 .opacity-10 {
@@ -1138,6 +1128,11 @@ body {
   background-color: rgb(209 213 219 / var(--tw-bg-opacity, 1));
 }
 
+.hover\:text-black:hover {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity, 1));
+}
+
 .hover\:text-creative-yellow:hover {
   --tw-text-opacity: 1;
   color: rgb(255 209 102 / var(--tw-text-opacity, 1));
@@ -1153,16 +1148,6 @@ body {
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
-.hover\:text-neuro-blue:hover {
-  --tw-text-opacity: 1;
-  color: rgb(58 134 255 / var(--tw-text-opacity, 1));
-}
-
-.hover\:text-black:hover {
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity, 1));
-}
-
 .hover\:underline:hover {
   text-decoration-line: underline;
 }
@@ -1171,18 +1156,13 @@ body {
   text-underline-offset: 4px;
 }
 
-.hover\:shadow-neuro-blue:hover {
-  --tw-shadow-color: #3a86ff;
+.hover\:shadow-black:hover {
+  --tw-shadow-color: #000;
   --tw-shadow: var(--tw-shadow-colored);
 }
 
 .hover\:shadow-neuro-blue\/30:hover {
   --tw-shadow-color: #3a86ff4d;
-  --tw-shadow: var(--tw-shadow-colored);
-}
-
-.hover\:shadow-black:hover {
-  --tw-shadow-color: #000;
   --tw-shadow: var(--tw-shadow-colored);
 }
 
