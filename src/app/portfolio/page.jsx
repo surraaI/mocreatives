@@ -17,7 +17,7 @@ export default function Portfolio() {
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.2 }}
           >
-            <p className="text-tech-grey font-sans text-lg leading-relaxed">
+            <p className="text-tech-grey contrast- font-sans text-lg leading-relaxed">
               Mo Creatives has worked with major financial institutions, tech
               companies, and emerging brands to deliver strategic marketing
               campaigns and digital solutions.
