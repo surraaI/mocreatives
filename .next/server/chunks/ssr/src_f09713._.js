@@ -254,7 +254,7 @@ function Portfolio() {
                                     delay: 0.2
                                 },
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                    className: "text-tech-grey contrast- font-sans text-lg leading-relaxed",
+                                    className: "text-tech-grey contrast-100 font-sans text-lg leading-relaxed",
                                     children: "Mo Creatives has worked with major financial institutions, tech companies, and emerging brands to deliver strategic marketing campaigns and digital solutions."
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/portfolio/page.jsx",
@@ -282,7 +282,7 @@ function Portfolio() {
                                 className: "flex gap-4 mt-6",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                                     href: "/works",
-                                    className: "mt-6 px-10 py-2 bg-black text-white font-semibold text-lg border border-gray-600 rounded-3xl hover:bg-cultural-red transition",
+                                    className: "mt-6 px-10 py-2 bg-cultural-red text-black font-semibold text-lg border border-cultural-red rounded-3xl hover:bg-cultural-red transition",
                                     children: "View our works"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/portfolio/page.jsx",
