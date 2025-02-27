@@ -85,7 +85,7 @@ const PortfolioTabs = () => {
       </div>
 
       {/* Cards for Active Tab */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 overflow-visible">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 overflow-visible px-20">
         {tabContent[activeTab].map((item, index) => (
           <motion.div
             key={index}
