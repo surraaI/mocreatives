@@ -64,7 +64,6 @@ const PortfolioTabs = () => {
       },
       {
         title: "BookNest",
-
         deliverables: "Email marketing and SEO strategy.",
         image: "/images/digital-marketing-2.png",
       },

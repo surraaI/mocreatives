@@ -86,19 +86,19 @@ const PortfolioTabs = ()=>{
                         children: tab
                     }, tab, false, {
                         fileName: "[project]/src/components/PortfolioTabs.jsx",
-                        lineNumber: 79,
+                        lineNumber: 78,
                         columnNumber: 11
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/src/components/PortfolioTabs.jsx",
-                lineNumber: 77,
+                lineNumber: 76,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "border-t-4 border-tech-grey  w-7/12  mx-auto mb-8"
             }, void 0, false, {
                 fileName: "[project]/src/components/PortfolioTabs.jsx",
-                lineNumber: 92,
+                lineNumber: 91,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -128,12 +128,12 @@ const PortfolioTabs = ()=>{
                                         className: "rounded-l-2xl shadow-lg object-cover"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/PortfolioTabs.jsx",
-                                        lineNumber: 108,
+                                        lineNumber: 107,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/PortfolioTabs.jsx",
-                                    lineNumber: 107,
+                                    lineNumber: 106,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -147,7 +147,7 @@ const PortfolioTabs = ()=>{
                                                     children: "Client:"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/PortfolioTabs.jsx",
-                                                    lineNumber: 119,
+                                                    lineNumber: 118,
                                                     columnNumber: 19
                                                 }, this),
                                                 " ",
@@ -155,7 +155,7 @@ const PortfolioTabs = ()=>{
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/PortfolioTabs.jsx",
-                                            lineNumber: 118,
+                                            lineNumber: 117,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -166,7 +166,7 @@ const PortfolioTabs = ()=>{
                                                     children: "Deliverables:"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/PortfolioTabs.jsx",
-                                                    lineNumber: 123,
+                                                    lineNumber: 122,
                                                     columnNumber: 19
                                                 }, this),
                                                 " ",
@@ -174,35 +174,35 @@ const PortfolioTabs = ()=>{
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/PortfolioTabs.jsx",
-                                            lineNumber: 122,
+                                            lineNumber: 121,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/PortfolioTabs.jsx",
-                                    lineNumber: 117,
+                                    lineNumber: 116,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, index, true, {
                             fileName: "[project]/src/components/PortfolioTabs.jsx",
-                            lineNumber: 102,
+                            lineNumber: 101,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/components/PortfolioTabs.jsx",
-                        lineNumber: 97,
+                        lineNumber: 96,
                         columnNumber: 11
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/src/components/PortfolioTabs.jsx",
-                lineNumber: 95,
+                lineNumber: 94,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/PortfolioTabs.jsx",
-        lineNumber: 75,
+        lineNumber: 74,
         columnNumber: 5
     }, this);
 };
