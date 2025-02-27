@@ -84,6 +84,24 @@ const PortfolioTabs = () => {
         ></div>
       </div>
 
+      {/* Description and Contact Button */}
+      <div className="flex justify-between items-center mb-8 px-32">
+        {/* Description */}
+        <div className="w-3/4">
+          <p className="text-xl text-tech-grey">
+            We deliver innovative and impactful results tailored to each
+            client's needs. Explore our work and get in touch to take your brand
+            to the next level.
+          </p>
+        </div>
+        {/* Contact Button */}
+        <div className="w-1/4 text-right">
+          <button className="px-6 py-2 bg-blue-600 text-white font-semibold rounded-full hover:bg-blue-700 transition">
+            Contact Us
+          </button>
+        </div>
+      </div>
+
       {/* Cards for Active Tab */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 overflow-visible px-28">
         {tabContent[activeTab].map((item, index) => (
