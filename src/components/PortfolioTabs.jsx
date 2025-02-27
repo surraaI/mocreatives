@@ -18,19 +18,16 @@ const PortfolioTabs = () => {
       },
       {
         title: "Cooperative Bank of Oromia",
-
         deliverables: "New Year TVC Campaign",
         image: "/images/website-design-2.png",
       },
       {
         title: "DIGAF Microfinance Institution (MFI) ",
-
         deliverables: "Marketing & Branding Support",
         image: "/images/website-design-2.png",
       },
       {
         title: "HealthCare Plus",
-
         deliverables: "Custom booking system with UI/UX design.",
         image: "/images/website-design-2.png",
       },
@@ -38,7 +35,6 @@ const PortfolioTabs = () => {
     "Training & Consulting": [
       {
         title: "UrbanStyle",
-
         deliverables: "Logo design and brand guidelines.",
         image: "/images/brand-identity-1.png",
       },
