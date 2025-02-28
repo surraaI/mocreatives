@@ -7,9 +7,9 @@ import PortfolioTabs from "../../components/PortfolioTabs";
 export default function Portfolio() {
   return (
     <>
-      <section className="min-h-screen  bg-neuro-blue flex flex-col md:flex-row items-center justify-between px-28 py-12 ">
-        <div className=" md:w-1/2 mb-8 md:mb-0 ml-10">
-          <h1 className="text-4xl font-bold text-white mb-4 ">
+      <section className="min-h-screen bg-neuro-blue flex flex-col md:flex-row items-center justify-between px-8 md:px-28 py-8 pt-24 md:pt-8">
+        <div className="md:w-1/2 mb-8 md:mb-0 ml-10">
+          <h1 className="text-4xl font-bold text-white mb-4">
             Portfolio & Case Studies
           </h1>
           <motion.div
@@ -39,8 +39,9 @@ export default function Portfolio() {
         </div>
 
         <div className="md:w-1/2 flex justify-center items-center relative gap-6">
+          {/* Macbook Image */}
           <motion.div
-            className="w-[380px] md:w-[500px] h-[260px] md:h-[320px] relative overflow-hidden"
+            className="w-[80%] md:w-[1000px] lg:w-[1200px] h-auto md:h-[700px] lg:h-[800px] relative overflow-hidden"
             initial={{ y: 50, opacity: 0, scale: 0.9 }}
             animate={{ y: 0, opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
@@ -48,13 +49,14 @@ export default function Portfolio() {
             <Image
               src="/assets/Macbook.png"
               alt="Desktop Mockup"
-              fill
-              className="object-contain"
+              layout="fill" // Ensures the image takes up its container
+              objectFit="contain" // Ensures the image scales without distortion
             />
           </motion.div>
 
+          {/* iPhone Image */}
           <motion.div
-            className="w-[180px] md:w-[200px] h-[360px] md:h-[420px] relative overflow-hidden"
+            className="absolute bottom-0 w-[100px] md:w-[150px] lg:w-[180px] h-auto md:h-[250px] lg:h-[300px] relative overflow-hidden"
             initial={{ y: 50, opacity: 0, scale: 0.9 }}
             animate={{ y: 0, opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
@@ -62,14 +64,14 @@ export default function Portfolio() {
             <Image
               src="/assets/iphone1.png"
               alt="Phone Mockup"
-              fill
-              className="object-contain"
+              layout="fill" // Ensures the image takes up its container
+              objectFit="contain" // Ensures the image scales without distortion
             />
           </motion.div>
         </div>
       </section>
 
-      <section className="bg-white py-12">
+      <section className="bg-light-gray py-12">
         <div className="container mx-auto">
           <PortfolioTabs />
         </div>

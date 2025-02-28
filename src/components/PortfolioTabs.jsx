@@ -62,14 +62,14 @@ const PortfolioTabs = () => {
   return (
     <section className="text-tech-grey py-16 px-4">
       {/* Navigation Tabs */}
-      <div className="flex justify-center space-x-24 text-xl font-bold mb-4">
+      <div className="flex flex-wrap justify-center space-x-20 text-xl font-bold mb-4">
         {tabs.map((tab) => (
           <button
             key={tab}
             onClick={() => setActiveTab(tab)}
             className={`${
-              activeTab === tab ? "text-black" : "text-tech-grey"
-            } hover:text-black transition `}
+              activeTab === tab ? "text-neuro-blue" : "text-creative-yellow"
+            } hover:text-neuro-blue transition`}
           >
             {tab}
           </button>
@@ -77,19 +77,19 @@ const PortfolioTabs = () => {
       </div>
 
       {/* Line with Triangle */}
-      <div className="relative w-7/12 mx-auto mb-8 border-t-2 border-tech-grey">
+      <div className="relative w-10/12 md:w-7/12 mx-auto mb-8 border-t-2 border-neuro-blue">
         <div
-          className="absolute transform -translate-x-1/2 -top-3 w-0 h-0 border-l-8 border-r-8 border-b-8 border-transparent border-b-tech-grey transition-all duration-300"
+          className="absolute transform -translate-x-1/2 -top-3 w-0 h-0 border-l-8 border-r-8 border-b-8 border-transparent border-b-neuro-blue transition-all duration-300"
           style={{ left: `${(70 / tabs.length) * (activeIndex + 0.5)}%` }} // Dynamic position
         ></div>
       </div>
 
       {/* Description and Contact Button */}
-      <div className="flex justify-start mb-4 w-full px-44">
+      <div className="flex flex-col sm:flex-row justify-start mb-4 w-full px-4 sm:px-16">
         {/* Description and Button in the same div with 3/4 width */}
-        <div className="flex w-3/4">
+        <div className="flex w-full sm:w-3/4">
           {/* Description */}
-          <div className="w-4/5 pr-4">
+          <div className="w-full sm:w-4/5 pr-4">
             <p className="text-xl text-tech-grey font-sans leading-relaxed">
               We deliver innovative and impactful results tailored to each
               client's needs. Explore our work and get in touch to take your
@@ -97,7 +97,7 @@ const PortfolioTabs = () => {
             </p>
           </div>
           {/* Contact Button */}
-          <div className="w-1/5 text-bottom">
+          <div className="w-full sm:w-1/5 mt-4 sm:mt-0">
             <button className="px-6 py-2 bg-blue-600 text-white font-semibold rounded-full hover:bg-blue-700 transition">
               Contact Us
             </button>
@@ -106,7 +106,7 @@ const PortfolioTabs = () => {
       </div>
 
       {/* Cards for Active Tab */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 overflow-visible px-28">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 overflow-visible px-4 sm:px-16">
         {tabContent[activeTab].map((item, index) => (
           <motion.div
             key={index}
@@ -114,7 +114,7 @@ const PortfolioTabs = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            <div className="relative bg-tech-grey rounded-2xl p-6 shadow-lg hover:shadow-black transition hover:scale-105 flex items-center overflow-visible w-[95%] mx-auto min-h-[280px]">
+            <div className="relative bg-neuro-blue rounded-2xl p-6 shadow-lg hover:shadow-black transition hover:scale-105 flex items-center w-full mx-auto min-h-[280px]">
               {/* Image */}
               <div className="w-[60%] relative -left-10">
                 <Image
