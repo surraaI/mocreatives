@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 
 const BlogPage = () => {
   const [title, setTitle] = useState("");
+  const fullTitle = "Welcome to MoCreatives Blog!";
   const blogContent = [
     {
       title: "How to Improve Your Web Design Skills",
@@ -31,13 +32,14 @@ const BlogPage = () => {
   ];
 
   useEffect(() => {
-    const fullTitle =
-      "Welcome to Our Blog vwertyuiosdfghjsdfghjxcvbnnm,fghjkwertyuiosdfghjksdfghjkwertyuidfghjkl!";
     let i = 0;
     const typingInterval = setInterval(() => {
-      setTitle((prev) => prev + fullTitle[i]);
-      i++;
-      if (i === fullTitle.length) clearInterval(typingInterval);
+      if (i < fullTitle.length) {
+        setTitle(fullTitle.slice(0, i + 1)); // Build string up to current index
+        i++;
+      } else {
+        clearInterval(typingInterval); // Stop when full length is reached
+      }
     }, 100);
 
     return () => clearInterval(typingInterval);
@@ -47,14 +49,23 @@ const BlogPage = () => {
     <div className="text-white overflow-x-hidden">
       {/* Hero Section */}
       <section className="bg-yellow-300 min-h-screen flex items-center justify-center px-4">
-        <motion.h1
-          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-center text-indigo-600"
+        <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          {title}
-        </motion.h1>
+          <h1 className="font-sans text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-center text-indigo-600">
+            {title.split(" ").map((word, idx) => (
+              <span key={idx}>
+                {word === "MoCreatives" ? (
+                  <span className="text-indigo-800">{word}</span> // Highlight "MoCreatives"
+                ) : (
+                  word
+                )}{" "}
+              </span>
+            ))}
+          </h1>
+        </motion.div>
       </section>
 
       {/* Blog Cards Section */}
