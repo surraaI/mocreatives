@@ -69,7 +69,7 @@ const PortfolioTabs = () => {
             onClick={() => setActiveTab(tab)}
             className={`${
               activeTab === tab ? "text-black" : "text-tech-grey"
-            } hover:text-black transition`}
+            } hover:text-black transition `}
           >
             {tab}
           </button>
@@ -80,7 +80,7 @@ const PortfolioTabs = () => {
       <div className="relative w-7/12 mx-auto mb-8 border-t-2 border-tech-grey">
         <div
           className="absolute transform -translate-x-1/2 -top-3 w-0 h-0 border-l-8 border-r-8 border-b-8 border-transparent border-b-tech-grey transition-all duration-300"
-          style={{ left: `${(100 / tabs.length) * (activeIndex + 0.5)}%` }} // Dynamic position
+          style={{ left: `${(70 / tabs.length) * (activeIndex + 0.5)}%` }} // Dynamic position
         ></div>
       </div>
 

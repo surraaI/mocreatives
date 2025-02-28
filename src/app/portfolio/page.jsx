@@ -7,14 +7,9 @@ import PortfolioTabs from "../../components/PortfolioTabs";
 export default function Portfolio() {
   return (
     <>
-      <section className="relative min-h-screen bg-neuro-blue flex flex-col md:flex-row items-center justify-between px-28 py-12 overflow-hidden">
-        <div className="absolute bottom-0 left-0 w-full h-[100px] bg-neuro-blue transform -skew-y-3 origin-bottom">
-          meme
-        </div>
-        <div className="z-10">
-          {" "}
-          cgujk
-          <h1 className="text-4xl font-bold text-white mb-4">
+      <section className="min-h-screen  bg-neuro-blue flex flex-col md:flex-row items-center justify-between px-28 py-12 ">
+        <div className=" md:w-1/2 mb-8 md:mb-0 ml-10">
+          <h1 className="text-4xl font-bold text-white mb-4 ">
             Portfolio & Case Studies
           </h1>
           <motion.div
@@ -22,7 +17,7 @@ export default function Portfolio() {
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.2 }}
           >
-            <p className="text-tech-grey contrast-100 font-sans text-lg leading-relaxed">
+            <p className="text-white contrast-100 font-sans text-lg leading-relaxed">
               Mo Creatives has worked with major financial institutions, tech
               companies, and emerging brands to deliver strategic marketing
               campaigns and digital solutions.
@@ -36,7 +31,7 @@ export default function Portfolio() {
           >
             <Link
               href="/works"
-              className="mt-6 px-10 py-2 bg-cultural-red text-black font-semibold text-lg border border-cultural-red rounded-3xl hover:bg-cultural-red transition"
+              className="mt-6 px-10 py-2 bg-creative-yellow text-white font-semibold text-lg border border-creative-yellow rounded-3xl shadow-sm shadow-creative-yellow hover:shadow-creative-yellow transition"
             >
               View our works
             </Link>
