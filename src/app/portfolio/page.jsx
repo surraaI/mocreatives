@@ -46,20 +46,11 @@ export default function Portfolio() {
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
             <Image
-              src="/assets/desktop1.png"
+              src="/assets/Macbook.png"
               alt="Desktop Mockup"
               fill
-              className="object-cover"
+              className="object-contain"
             />
-            <motion.div className="absolute inset-0 flex justify-center items-center p-4">
-              <Image
-                src="/assets/project-image.jpg"
-                alt="Project on Desktop"
-                className="w-[85%] h-[85%] object-contain"
-                width={400}
-                height={200}
-              />
-            </motion.div>
           </motion.div>
 
           <motion.div
@@ -69,20 +60,11 @@ export default function Portfolio() {
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
           >
             <Image
-              src="/assets/mobile1.png"
+              src="/assets/iphone1.png"
               alt="Phone Mockup"
               fill
-              className="object-cover"
+              className="object-contain"
             />
-            <motion.div className="absolute inset-0 flex justify-center items-center p-4">
-              <Image
-                src="/assets/project-image.jpg"
-                alt="Project on Phone"
-                className="w-[70%] h-[70%] object-contain"
-                width={200}
-                height={900}
-              />
-            </motion.div>
           </motion.div>
         </div>
       </section>
