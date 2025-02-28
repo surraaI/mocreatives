@@ -10,7 +10,7 @@ const BlogPage = () => {
     {
       title: "How to Improve Your Web Design Skills",
       description:
-        "Learn the fundamentals of good web design and how you can improve your skills in the field.",
+        "Learn the fundamentals of good web design and how you can improve your skills in the field.dfghjklsdfghjkfghjkcvbnmfghj",
       image: "/assets/blog-image1.jpg",
       slug: "/blog/how-to-improve-web-design-skills",
     },
@@ -28,11 +28,11 @@ const BlogPage = () => {
       image: "/assets/blog-image3.jpg",
       slug: "/blog/top-5-programming-languages",
     },
-    // Add more blog posts as needed
   ];
 
   useEffect(() => {
-    const fullTitle = "Welcome to Our Blog!";
+    const fullTitle =
+      "Welcome to Our Blog vwertyuiosdfghjsdfghjxcvbnnm,fghjkwertyuiosdfghjksdfghjkwertyuidfghjkl!";
     let i = 0;
     const typingInterval = setInterval(() => {
       setTitle((prev) => prev + fullTitle[i]);
@@ -44,52 +44,82 @@ const BlogPage = () => {
   }, []);
 
   return (
-    <div className="max-w-screen-xl mx-auto px-4 py-10">
-      {/* Big Title with Typewriting Effect */}
-      <motion.h1
-        className="text-4xl font-semibold text-center mb-10 text-blue-800"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-      >
-        {title}
-      </motion.h1>
-
-      {/* Blog Cards Section */}
-      <div className="flex flex-wrap justify-start gap-6">
-        {blogContent.map((item, index) => (
-          <div
-            key={index}
-            className="relative bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition hover:scale-105 flex items-center w-full max-w-[100%]"
+    <section className="text-white py-8 px-4 overflow-x-hidden pt-[100px]">
+      <div className="space-y-8">
+        {/* Title Section */}
+        <div className="mb-4 bg-black px-4 sm:px-8 md:px-16 lg:px-24 py-4">
+          <motion.h1
+            className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center mb-6 text-indigo-600"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
           >
-            {/* Image */}
-            <div className="w-[40%]">
-              <Image
-                src={item.image}
-                alt={item.title}
-                width={400}
-                height={250}
-                className="rounded-l-2xl shadow-lg object-cover"
-              />
-            </div>
+            {title}
+          </motion.h1>
+        </div>
 
-            {/* Text Content */}
-            <div className="w-[60%] pl-6">
-              <h3 className="text-lg font-semibold text-gray-800">
-                {item.title}
-              </h3>
-              <p className="mt-2 text-gray-600">{item.description}</p>
-              <Link
-                href={item.slug}
-                className="mt-4 text-blue-600 hover:underline"
-              >
-                Read Me
-              </Link>
+        {/* Blog Cards Section */}
+        <div className="grid grid-cols-1 gap-4 px-4 sm:px-6 md:px-8 lg:px-12">
+          {blogContent.map((item, index) => (
+            <div
+              key={index}
+              className="bg-yellow-300 rounded-2xl shadow-lg hover:shadow-xl transition hover:scale-105 w-full max-w-6xl mx-auto"
+            >
+              <div className="flex flex-col sm:flex-row sm:items-start">
+                {/* Image */}
+                <div className="w-full sm:w-1/3 p-2">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    width={300}
+                    height={150}
+                    className="rounded-lg shadow-lg object-cover w-full"
+                  />
+                </div>
+
+                {/* Text Content */}
+                <div className="w-full sm:w-2/3 p-2 flex flex-col">
+                  {/* Small Screen: Image and Title Side by Side */}
+                  <div className="flex items-center space-x-4 sm:hidden">
+                    <div className="w-1/3">
+                      <Image
+                        src={item.image}
+                        alt={item.title}
+                        width={100}
+                        height={100}
+                        className="rounded-lg shadow-lg object-cover w-full"
+                      />
+                    </div>
+                    <h3 className="text-lg font-semibold text-gray-800">
+                      {item.title}
+                    </h3>
+                  </div>
+
+                  {/* Title for Larger Screens */}
+                  <h3 className="hidden sm:block text-lg font-semibold text-gray-800 mb-1">
+                    {item.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="text-gray-600 mb-2 sm:mb-2">
+                    {item.description}
+                  </p>
+
+                  {/* Read More Link */}
+                  <Link
+                    href={item.slug}
+                    className="text-blue-600 text-lg font-medium flex items-center space-x-1 mt-auto"
+                  >
+                    <span className="underline">Read More</span>
+                    <span>→</span> {/* Right arrow without underline */}
+                  </Link>
+                </div>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
