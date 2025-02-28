@@ -7,9 +7,14 @@ import PortfolioTabs from "../../components/PortfolioTabs";
 export default function Portfolio() {
   return (
     <>
-      <section className="min-h-screen  bg-light-gray flex flex-col md:flex-row items-center justify-between px-6 py-12 ">
-        <div className=" md:w-1/2 mb-8 md:mb-0 ml-10">
-          <h1 className="text-4xl font-bold text-cultural-red mb-4">
+      <section className="relative min-h-screen bg-neuro-blue flex flex-col md:flex-row items-center justify-between px-28 py-12 overflow-hidden">
+        <div className="absolute bottom-0 left-0 w-full h-[100px] bg-neuro-blue transform -skew-y-3 origin-bottom">
+          meme
+        </div>
+        <div className="z-10">
+          {" "}
+          cgujk
+          <h1 className="text-4xl font-bold text-white mb-4">
             Portfolio & Case Studies
           </h1>
           <motion.div
