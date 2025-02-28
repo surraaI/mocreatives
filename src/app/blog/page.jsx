@@ -89,10 +89,16 @@ const BlogPage = () => {
               </span>
             ))}
           </h1>
-          <p className="text-center text-tech-grey text-sm sm:text-base md:text-lg mt-2 pt-12">
-            A guide for beginners to understand the best programming languages
-            to start with.
-          </p>
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+          >
+            <p className="text-center text-tech-grey text-sm sm:text-base md:text-lg mt-2 pt-12">
+              A guide for beginners to understand the best programming languages
+              to start with.
+            </p>
+          </motion.div>
         </motion.div>
       </section>
 
