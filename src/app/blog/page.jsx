@@ -96,7 +96,7 @@ const BlogPage = () => {
             {currentPosts.map((item, index) => (
               <div
                 key={index}
-                className="bg-yellow-300 rounded-2xl shadow-lg hover:shadow-xl transition hover:scale-105 w-full max-w-6xl mx-auto"
+                className="bg-creative-yellow rounded-2xl shadow-lg hover:shadow-xl transition hover:scale-105 w-full max-w-6xl mx-auto"
               >
                 <div className="flex flex-col sm:flex-row sm:items-start">
                   {/* Image and Title Container */}
@@ -128,14 +128,14 @@ const BlogPage = () => {
                     </h3>
 
                     {/* Description */}
-                    <p className="text-gray-600 mb-2 sm:mb-2">
+                    <p className="text-tech-grey mb-2 sm:mb-2">
                       {item.description}
                     </p>
 
                     {/* Read More Link */}
                     <Link
                       href={item.slug}
-                      className="text-blue-600 text-lg font-medium flex items-center space-x-1 mt-auto"
+                      className="text-neuro-blue text-lg font-medium flex items-center space-x-1 mt-auto"
                     >
                       <span className="underline">Read More</span>
                       <span>→</span> {/* Right arrow without underline */}
