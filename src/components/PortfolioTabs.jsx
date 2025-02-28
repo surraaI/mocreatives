@@ -1,127 +1,125 @@
-// components/PortfolioTabs.js
-
 import { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import portfolioData from "@/data/portfolioData";
 
 const PortfolioTabs = () => {
   const [activeTab, setActiveTab] = useState("Marketing");
-
-  // Data for each tab
-  const tabContent = {
-    Marketing: [
-      {
-        title: "Oromia Insurance Company (OIC)",
-
-        deliverables: " Rebranding TV Commercial (TVC)",
-        image: "/assets/mall.jpg",
-      },
-      {
-        title: "Cooperative Bank of Oromia",
-        deliverables: "New Year TVC Campaign",
-        image: "/images/website-design-2.png",
-      },
-      {
-        title: "DIGAF Microfinance Institution (MFI) ",
-        deliverables: "Marketing & Branding Support",
-        image: "/images/website-design-2.png",
-      },
-      {
-        title: "HealthCare Plus",
-        deliverables: "Custom booking system with UI/UX design.",
-        image: "/images/website-design-2.png",
-      },
-    ],
-    "Training & Consulting": [
-      {
-        title: "UrbanStyle",
-        deliverables: "Logo design and brand guidelines.",
-        image: "/images/brand-identity-1.png",
-      },
-      {
-        title: "FreshBites",
-
-        deliverables: "Packaging design and social media assets.",
-        image: "/images/brand-identity-2.png",
-      },
-      {
-        title: "FreshBites",
-
-        deliverables: "Packaging design and social media assets.",
-        image: "/images/brand-identity-2.png",
-      },
-    ],
-    "Digital Solutions": [
-      {
-        title: "Ease Engineering",
-
-        deliverables: "Brand & Digital Solutions.",
-        image: "/images/digital-marketing-1.png",
-      },
-      {
-        title: "BookNest",
-
-        deliverables: "Email marketing and SEO strategy.",
-        image: "/images/digital-marketing-2.png",
-      },
-    ],
-  };
+  const tabs = Object.keys(portfolioData);
 
   return (
-    <section className=" text-white py-16 px-4">
-      {/* Navigation Tabs */}
-      <div className="flex justify-center space-x-24 text-xl font-bold mb-4">
-        {Object.keys(tabContent).map((tab) => (
-          <button
+    <section className="text-tech-grey py-16 px-4">
+      <motion.div
+        className="flex justify-center gap-4 text-xl font-bold mb-6 px-4"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+      >
+        {tabs.map((tab) => (
+          <motion.button
             key={tab}
             onClick={() => setActiveTab(tab)}
-            className={`${
-              activeTab === tab ? "text-cultural-red" : "text-white"
-            } hover:text-cultural-red transition`}
+            className={`relative flex justify-center items-center min-w-[120px] px-6 py-2 transition-all duration-300 ${
+              activeTab === tab
+                ? "text-neuro-blue"
+                : "text-gray-500 hover:text-neuro-blue"
+            }`}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
-            {tab}
-          </button>
+            <span className="relative z-10 mx-5 md:text-2xl text-sm">
+              {tab}
+            </span>
+            {activeTab === tab && (
+              <motion.span
+                className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-0 h-0 
+      border-l-8 border-r-8 border-b-8 border-transparent
+      border-b-neuro-blue"
+                layoutId="tab-highlight"
+                initial={{ opacity: 0, scale: 0 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.3 }}
+              />
+            )}
+          </motion.button>
         ))}
+      </motion.div>
+      <hr className="border-t-4 border-t-neuro-blue mb-14 -mt-2 md:w-1/2 mx-auto" />
+
+      <div className="flex flex-col sm:flex-row items-center justify-center mx-auto px-4 text-center">
+        <p>
+          We deliver{" "}
+          <span className="font-semibold text-neuro-blue">innovative</span>
+          <span>and</span>
+          <span className="font-semibold text-neuro-blue">impactful</span>{" "}
+          results tailored to your needs. Explore our work and level up your
+          brand.
+        </p>
+        <div className="mt-6 sm:mt-0 ml-6">
+          <motion.button
+            className="relative px-6 py-2 bg-blue-600 text-white font-semibold rounded-full overflow-hidden group"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ duration: 0.2 }}
+          >
+            <span className="relative z-10">Contact Us</span>
+            <span className="absolute inset-0 bg-blue-700 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300"></span>
+          </motion.button>
+        </div>
       </div>
 
-      {/* Yellow Line */}
-      <div className="border-t-4 border-cultural-red w-7/12  mx-auto mb-8"></div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 overflow-visible px-4 sm:px-16 mt-10">
+        {portfolioData[activeTab].map((item, index) => {
+          const isLeftCard = index % 2 === 0;
 
-      {/* Cards for Active Tab */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 overflow-visible">
-        {tabContent[activeTab].map((item, index) => (
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-          >
-            <div
+          return (
+            <motion.div
               key={index}
-              className="relative bg-cultural-red rounded-2xl p-6 shadow-lg hover:shadow-neuro-blue transition hover:scale-105 flex items-center overflow-visible w-[95%]  mx-auto min-h-[280px]"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1 }}
             >
-              {/* Image */}
-              <div className="w-[60%] relative -left-10">
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  width={400}
-                  height={250}
-                  className="rounded-l-2xl shadow-lg object-cover"
-                />
+              <div
+                className={`relative bg-neuro-blue rounded-2xl p-6 shadow-lg hover:shadow-black transition hover:scale-105 w-full mx-auto min-h-[280px] 
+            flex flex-col sm:flex-row sm:items-center 
+            ${!isLeftCard ? "sm:flex-row-reverse" : ""}`}
+              >
+                <div
+                  className={`w-full sm:w-[60%] relative 
+              -top-10 sm:top-0 
+              ${isLeftCard ? "sm:-left-10" : "sm:-right-10"}`}
+                >
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    width={400}
+                    height={250}
+                    className={`shadow-lg object-cover w-full
+                rounded-t-2xl sm:rounded-t-none 
+                ${
+                  isLeftCard
+                    ? "sm:rounded-l-2xl sm:rounded-r-md"
+                    : "sm:rounded-r-2xl sm:rounded-l-md"
+                }`}
+                  />
+                </div>
+                <div
+                  className={`w-full sm:w-1/2 
+              ${isLeftCard ? "sm:pl-6" : "sm:pr-6"} mt-4 sm:mt-0`}
+                >
+                  <h3 className="text-md text-white">
+                    <span className="font-bold text-white">Client:</span>{" "}
+                    {item.title}
+                  </h3>
+                  <p className="mt-2 font-sans text-white">
+                    <span className="font-bold text-white">Deliverables:</span>{" "}
+                    {item.deliverables}
+                  </p>
+                </div>
               </div>
-              {/* Text Content */}
-              <div className="w-1/2 pl-6">
-                <h3 className="text-md font-sans">
-                  <span className="font-bold">Client:</span> {item.title}
-                </h3>
-                <p className="mt-2 font-sans">
-                  <span className="font-bold">Deliverables:</span>{" "}
-                  {item.deliverables}
-                </p>
-              </div>
-            </div>
-          </motion.div>
-        ))}
+            </motion.div>
+          );
+        })}
       </div>
     </section>
   );
