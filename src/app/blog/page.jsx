@@ -10,7 +10,7 @@ const BlogPage = () => {
     {
       title: "How to Improve Your Web Design Skills",
       description:
-        "Learn the fundamentals of good web design and how you can improve your skills in the field.dfghjklsdfghjkfghjkcvbnmfghj",
+        "Learn the fundamentals of good web design and how you can improve your skills in the field.",
       image: "/assets/blog-image1.jpg",
       slug: "/blog/how-to-improve-web-design-skills",
     },
@@ -66,35 +66,29 @@ const BlogPage = () => {
               className="bg-yellow-300 rounded-2xl shadow-lg hover:shadow-xl transition hover:scale-105 w-full max-w-6xl mx-auto"
             >
               <div className="flex flex-col sm:flex-row sm:items-start">
-                {/* Image */}
-                <div className="w-full sm:w-1/3 p-2">
+                {/* Image and Title Container */}
+                <div className="flex items-center space-x-4 p-2 sm:w-1/3 sm:block">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    width={100}
+                    height={100}
+                    className="rounded-lg shadow-lg object-cover w-full block sm:hidden"
+                  />
                   <Image
                     src={item.image}
                     alt={item.title}
                     width={300}
                     height={150}
-                    className="rounded-lg shadow-lg object-cover w-full"
+                    className="rounded-lg shadow-lg object-cover w-full hidden sm:block"
                   />
+                  <h3 className="text-lg font-semibold text-gray-800 sm:hidden">
+                    {item.title}
+                  </h3>
                 </div>
 
                 {/* Text Content */}
                 <div className="w-full sm:w-2/3 p-2 flex flex-col">
-                  {/* Small Screen: Image and Title Side by Side */}
-                  <div className="flex items-center space-x-4 sm:hidden">
-                    <div className="w-1/3">
-                      <Image
-                        src={item.image}
-                        alt={item.title}
-                        width={100}
-                        height={100}
-                        className="rounded-lg shadow-lg object-cover w-full"
-                      />
-                    </div>
-                    <h3 className="text-lg font-semibold text-gray-800">
-                      {item.title}
-                    </h3>
-                  </div>
-
                   {/* Title for Larger Screens */}
                   <h3 className="hidden sm:block text-lg font-semibold text-gray-800 mb-1">
                     {item.title}
