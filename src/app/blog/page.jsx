@@ -7,6 +7,9 @@ import { motion } from "framer-motion";
 const BlogPage = () => {
   const [title, setTitle] = useState("");
   const fullTitle = "Welcome to MoCreatives Blog!";
+  const [currentPage, setCurrentPage] = useState(1);
+  const postsPerPage = 2; // Number of blog posts per page
+
   const blogContent = [
     {
       title: "How to Improve Your Web Design Skills",
@@ -35,36 +38,54 @@ const BlogPage = () => {
     let i = 0;
     const typingInterval = setInterval(() => {
       if (i < fullTitle.length) {
-        setTitle(fullTitle.slice(0, i + 1)); // Build string up to current index
+        setTitle(fullTitle.slice(0, i + 1));
         i++;
       } else {
-        clearInterval(typingInterval); // Stop when full length is reached
+        clearInterval(typingInterval);
       }
     }, 100);
 
     return () => clearInterval(typingInterval);
   }, []);
 
+  // Calculate pagination details
+  const totalPosts = blogContent.length;
+  const totalPages = Math.ceil(totalPosts / postsPerPage);
+  const indexOfLastPost = currentPage * postsPerPage;
+  const indexOfFirstPost = indexOfLastPost - postsPerPage;
+  const currentPosts = blogContent.slice(indexOfFirstPost, indexOfLastPost);
+
+  // Handle page change
+  const handlePageChange = (pageNumber) => {
+    if (pageNumber >= 1 && pageNumber <= totalPages) {
+      setCurrentPage(pageNumber);
+    }
+  };
+
   return (
     <div className="text-white overflow-x-hidden">
       {/* Hero Section */}
-      <section className="bg-yellow-300 min-h-screen flex items-center justify-center px-4">
+      <section className="bg-light-grey min-h-[50vh] flex items-center justify-center px-4">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          <h1 className="font-sans text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-center text-indigo-600">
+          <h1 className="font-sans text-2xl sm:text-3xl md:text-4xl lg:text-5xl pt-44 font-semibold text-center text-neuro-blue">
             {title.split(" ").map((word, idx) => (
               <span key={idx}>
                 {word === "MoCreatives" ? (
-                  <span className="text-indigo-800">{word}</span> // Highlight "MoCreatives"
+                  <span className="text-creative-yellow">{word}</span>
                 ) : (
                   word
                 )}{" "}
               </span>
             ))}
           </h1>
+          <p className="text-center text-tech-grey text-sm sm:text-base md:text-lg mt-2 pt-12">
+            A guide for beginners to understand the best programming languages
+            to start with.
+          </p>
         </motion.div>
       </section>
 
@@ -72,7 +93,7 @@ const BlogPage = () => {
       <section className="py-8 px-4 pt-[100px]">
         <div className="space-y-8">
           <div className="grid grid-cols-1 gap-4 px-4 sm:px-6 md:px-8 lg:px-12">
-            {blogContent.map((item, index) => (
+            {currentPosts.map((item, index) => (
               <div
                 key={index}
                 className="bg-yellow-300 rounded-2xl shadow-lg hover:shadow-xl transition hover:scale-105 w-full max-w-6xl mx-auto"
@@ -123,6 +144,47 @@ const BlogPage = () => {
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* Pagination Controls */}
+          <div className="flex justify-center items-center space-x-4 mt-8">
+            <button
+              onClick={() => handlePageChange(currentPage - 1)}
+              disabled={currentPage === 1}
+              className={`px-4 py-2 bg-indigo-600 text-white rounded-lg text-lg ${
+                currentPage === 1
+                  ? "opacity-50 cursor-not-allowed"
+                  : "hover:bg-indigo-700"
+              }`}
+            >
+              ←
+            </button>
+            {Array.from({ length: totalPages }, (_, i) => i + 1).map(
+              (pageNumber) => (
+                <button
+                  key={pageNumber}
+                  onClick={() => handlePageChange(pageNumber)}
+                  className={`px-4 py-2 rounded-lg text-lg ${
+                    currentPage === pageNumber
+                      ? "bg-indigo-800 text-white"
+                      : "bg-indigo-600 text-white hover:bg-indigo-700"
+                  }`}
+                >
+                  {pageNumber}
+                </button>
+              )
+            )}
+            <button
+              onClick={() => handlePageChange(currentPage + 1)}
+              disabled={currentPage === totalPages}
+              className={`px-4 py-2 bg-indigo-600 text-white rounded-lg text-lg ${
+                currentPage === totalPages
+                  ? "opacity-50 cursor-not-allowed"
+                  : "hover:bg-indigo-700"
+              }`}
+            >
+              →
+            </button>
           </div>
         </div>
       </section>
