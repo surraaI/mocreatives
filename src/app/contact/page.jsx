@@ -8,7 +8,7 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <div className="relative w-full h-[70vh] overflow-hidden bg-gradient-to-br from-neuro-blue via-white to-creative-yellow">
+      <div className="relative w-full h-[70vh] min-h-[500px] overflow-hidden bg-gradient-to-br from-neuro-blue via-white to-creative-yellow">
         <div className="absolute inset-0 bg-[url('/assets/grid.jpg')] opacity-10 mix-blend-overlay" />
         
         {/* Floating Elements */}
@@ -35,48 +35,28 @@ export default function ContactPage() {
           />
         ))}
 
-        <Container size="xl" className="h-full">
-          <Grid gutter="xl" align="center" className="h-full">
-            <Grid.Col span={{ base: 12, md: 6 }} className="relative z-10">
-              <motion.div
-                initial={{ opacity: 0, y: 40 }}
-                animate={{ opacity: 1, y: 0 }}
-                className="text-left"
-              >
-                <Text className="text-cultural-red uppercase font-semibold tracking-wider mb-4">
-                  Let's Build Something Amazing
-                </Text>
-                
-                <Title className="text-5xl md:text-7xl font-black mb-6 tracking-tighter font-lato leading-tight">
-                  <span className="text-neuro-blue">CONNECT</span>{' '}
-                  <span className="text-cultural-red">WITH US</span>
-                </Title>
+        <Container size="xl" className="h-full flex items-center justify-center">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-center max-w-3xl px-4 w-full"
+          >
+            <Text className="text-cultural-red uppercase font-semibold tracking-wider mb-4">
+              Let's Build Something Amazing
+            </Text>
+            
+            <Title className="text-5xl md:text-7xl font-black mb-6 tracking-tighter font-lato leading-tight">
+              <span className="text-neuro-blue">CONNECT</span>{' '}
+              <span className="text-cultural-red">WITH US</span>
+            </Title>
 
-                <Text className="text-xl md:text-2xl text-tech-grey font-medium font-open-sans max-w-xl mb-8">
-                  Whether you have a project in mind or just want to chat about digital possibilities - we're all ears.
-                </Text>
-              </motion.div>
-            </Grid.Col>
-
-            <Grid.Col span={{ base: 12, md: 6 }} className="relative">
-              <motion.div
-                initial={{ opacity: 0, x: 100 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
-                className="relative h-[500px]"
-              >
-                <div className="absolute inset-0 bg-gradient-to-r from-neuro-blue/10 to-creative-yellow/10 -rotate-6 rounded-3xl transform scale-105" />
-                <img
-                  src="/assets/contact-hero.jpg"
-                  alt="Contact Mo Creatives"
-                  className="absolute inset-0 w-full h-full object-contain object-right rounded-2xl transform rotate-1 shadow-2xl"
-                />
-              </motion.div>
-            </Grid.Col>
-          </Grid>
+            <Text className="text-xl md:text-2xl text-tech-grey font-medium font-open-sans mb-8 mx-auto max-w-2xl">
+              Whether you have a project in mind or just want to chat about digital possibilities - we're all ears.
+            </Text>
+          </motion.div>
         </Container>
       </div>
-
+      
       {/* Contact Content */}
       <Container size="xl" className="py-20 px-4 sm:px-6">
         <Grid gutter="xl">
