@@ -79,7 +79,7 @@ const PortfolioTabs = () => {
               transition={{ duration: 1 }}
             >
               <div
-                className={`relative bg-neuro-blue rounded-2xl p-6 shadow-lg hover:shadow-black transition hover:scale-105 w-full mx-auto min-h-[280px] 
+                className={`relative bg-red-800 rounded-2xl p-6 shadow-sm shadow-creative-yellow hover:shadow-black transition hover:scale-105 w-full mx-auto min-h-[280px] 
             flex flex-col sm:flex-row sm:items-center 
             ${!isLeftCard ? "sm:flex-row-reverse" : ""}`}
               >
