@@ -56,13 +56,13 @@ const PortfolioTabs = () => {
         </p>
         <div className="mt-6 sm:mt-0 ml-6">
           <motion.button
-            className="relative px-6 py-2 bg-blue-600 text-white font-semibold rounded-full overflow-hidden group"
+            className="relative px-6 py-2 bg-cultural-red text-white font-semibold rounded-full overflow-hidden group"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             transition={{ duration: 0.2 }}
           >
             <span className="relative z-10">Contact Us</span>
-            <span className="absolute inset-0 bg-blue-700 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300"></span>
+            <span className="absolute inset-0 bg-cultural-red scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300"></span>
           </motion.button>
         </div>
       </div>
