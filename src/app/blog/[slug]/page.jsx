@@ -184,7 +184,7 @@ const BlogPostPage = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter your email"
-              className="bg-gray-600 text-white px-4 py-3 rounded-3xl text-lg focus:outline-none focus:ring-2 focus:ring-creative-yellow"
+              className="bg-gray-500 text-white px-4 py-3 rounded-3xl text-lg focus:outline-none focus:ring-2 focus:ring-creative-yellow"
               required
             />
             <button
