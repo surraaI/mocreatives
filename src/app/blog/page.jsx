@@ -68,9 +68,9 @@ const BlogPage = () => {
   };
 
   return (
-    <div className="text-white overflow-x-hidden">
+    <div className="text-white overflow-x-hidden box-border">
       {/* Hero Section */}
-      <section className="bg-black min-h-[50vh] flex items-center justify-center px-4">
+      <section className="bg-black min-h-[50vh] flex items-center justify-center px-4 overflow-x-hidden">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -92,7 +92,7 @@ const BlogPage = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            <p className="text-center text-red-800 font-sans text-sm sm:text-base md:text-lg mt-2 pt-12">
+            <p className="text-center text-red-800 font-sans text-sm sm:text-base md:text-lg mt-2 pt-12 max-w-full">
               A guide for beginners to understand the best programming languages
               to start with.
             </p>
@@ -101,47 +101,47 @@ const BlogPage = () => {
       </section>
 
       {/* Blog Cards Section */}
-      <section className="py-8 px-4 pt-[100px] bg-black">
-        <div className="space-y-8">
+      <section className="py-8 px-4 pt-[100px] bg-black overflow-x-hidden box-border">
+        <div className="space-y-8 max-w-full">
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            <div className="grid grid-cols-1 gap-8 px-4 sm:px-32 md:px-40 lg:px-48">
+            <div className="grid grid-cols-1 gap-8 px-4 sm:px-16 md:px-20 lg:px-24 max-w-full">
               {currentPosts.map((item, index) => (
                 <div
                   key={index}
-                  className="bg-red-800 rounded-2xl shadow-sm shadow-yellow-300 hover:shadow-xl transition hover:scale-105 w-full max-w-full sm:max-w-6xl mx-auto h-56 sm:h-48"
+                  className="bg-red-800 rounded-2xl shadow-sm shadow-yellow-300 sm:hover:shadow-xl transition sm:hover:scale-105 w-full max-w-full h-auto sm:h-48 overflow-hidden box-border"
                 >
-                  <div className="flex flex-col sm:flex-row sm:items-start h-full">
+                  <div className="flex flex-col sm:flex-row sm:items-start w-full h-full max-w-full">
                     {/* Image and Title Container */}
-                    <div className="flex items-center space-x-4 p-1 sm:w-1/3 sm:block">
-                      <div className="p-2 w-48 h-36 sm:w-64 sm:h-44">
+                    <div className="flex items-center space-x-2 p-2 sm:w-1/3 sm:block shrink-0 max-w-full">
+                      <div className="w-48 h-36 sm:w-64 sm:h-44">
                         <Image
                           src={item.image}
                           alt={item.title}
                           width={192} // Matches w-48 (192px) for mobile
                           height={144} // Matches h-36 (144px) for mobile
-                          className="rounded-lg shadow-lg object-cover w-full h-full block"
+                          className="rounded-lg shadow-lg object-cover w-full h-full block max-w-full"
                         />
                       </div>
-                      <h3 className="text-lg font-semibold text-white sm:hidden truncate">
+                      <h3 className="text-lg font-semibold text-white sm:hidden truncate max-w-[calc(100%-12rem)]">
                         {item.title}
                       </h3>
                     </div>
 
                     {/* Text Content */}
-                    <div className="w-full sm:w-2/3 p-1 flex flex-col h-full overflow-hidden">
+                    <div className="w-full sm:w-2/3 p-2 flex flex-col h-full overflow-hidden max-w-full">
                       <h3 className="hidden sm:block text-lg font-semibold text-white mb-1 truncate">
                         {item.title}
                       </h3>
-                      <p className="text-white mb-1 line-clamp-2">
+                      <p className="text-white mb-1 sm:line-clamp-2 max-w-full">
                         {item.description}
                       </p>
                       <Link
                         href={item.slug}
-                        className="text-creative-yellow text-lg font-medium flex items-center space-x-1 mt-auto"
+                        className="text-creative-yellow text-lg font-medium flex items-center space-x-1 mt-2 sm:mt-auto shrink-0 max-w-full"
                       >
                         <span className="underline">Read More</span>
                         <span>→</span>
@@ -154,7 +154,7 @@ const BlogPage = () => {
           </motion.div>
 
           {/* Pagination Controls */}
-          <div className="flex justify-center items-center space-x-4 mt-8">
+          <div className="flex justify-center items-center space-x-4 mt-8 pb-8 max-w-full">
             <button
               onClick={() => handlePageChange(currentPage - 1)}
               disabled={currentPage === 1}
