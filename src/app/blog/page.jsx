@@ -114,34 +114,34 @@ const BlogPage = () => {
                   key={index}
                   className="bg-red-800 rounded-2xl shadow-sm shadow-yellow-300 sm:hover:shadow-xl transition sm:hover:scale-105 w-full max-w-full h-auto sm:h-48 overflow-hidden box-border"
                 >
-                  <div className="flex flex-col sm:flex-row sm:items-start w-full h-full max-w-full">
+                  <div className="flex flex-col sm:flex-row sm:items-start w-full h-full max-w-full p-6">
                     {/* Image and Title Container */}
-                    <div className="flex items-center space-x-2 p-2 sm:w-1/3 sm:block shrink-0 max-w-full">
-                      <div className="w-48 h-36 sm:w-64 sm:h-44">
+                    <div className="flex items-center space-x-4 sm:w-1/3 sm:block shrink-0 max-w-full">
+                      <div className="w-48 h-36 sm:w-64 sm:h-36">
                         <Image
                           src={item.image}
                           alt={item.title}
                           width={192} // Matches w-48 (192px) for mobile
-                          height={144} // Matches h-36 (144px) for mobile
+                          height={144} // Matches h-36 (144px) for both mobile and larger screens
                           className="rounded-lg shadow-lg object-cover w-full h-full block max-w-full"
                         />
                       </div>
-                      <h3 className="text-lg font-semibold text-white sm:hidden truncate max-w-[calc(100%-12rem)]">
+                      <h3 className="text-lg font-semibold text-white sm:hidden max-w-[calc(100%-12rem)]">
                         {item.title}
                       </h3>
                     </div>
 
                     {/* Text Content */}
-                    <div className="w-full sm:w-2/3 p-2 flex flex-col h-full overflow-hidden max-w-full">
-                      <h3 className="hidden sm:block text-lg font-semibold text-white mb-1 truncate">
+                    <div className="w-full sm:w-2/3 flex flex-col h-full overflow-hidden max-w-full space-y-3">
+                      <h3 className="hidden sm:block text-lg font-semibold text-white">
                         {item.title}
                       </h3>
-                      <p className="text-white mb-1 sm:line-clamp-2 max-w-full">
+                      <p className="text-white sm:line-clamp-2 max-w-full">
                         {item.description}
                       </p>
                       <Link
                         href={item.slug}
-                        className="text-creative-yellow text-lg font-medium flex items-center space-x-1 mt-2 sm:mt-auto shrink-0 max-w-full"
+                        className="text-creative-yellow text-lg font-medium flex items-center space-x-1 sm:mt-auto shrink-0 max-w-full"
                       >
                         <span className="underline">Read More</span>
                         <span>→</span>
@@ -154,7 +154,7 @@ const BlogPage = () => {
           </motion.div>
 
           {/* Pagination Controls */}
-          <div className="flex justify-center items-center space-x-4 mt-8 pb-8 max-w-full">
+          <div className="flex justify-center items-center space-x-4 mt-8 max-w-full">
             <button
               onClick={() => handlePageChange(currentPage - 1)}
               disabled={currentPage === 1}
