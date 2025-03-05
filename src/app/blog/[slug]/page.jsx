@@ -184,14 +184,13 @@ const BlogPostPage = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter your email"
-              className="bg-gradient-to-br from-black via-cultural-red to-red-800 text-white px-4 py-3 rounded-3xl text-lg focus:outline-none focus:ring-2 focus:ring-creative-yellow"
+              className="bg-gray-600 text-white px-4 py-3 rounded-3xl text-lg focus:outline-none focus:ring-2 focus:ring-creative-yellow"
               required
             />
             <button
               type="submit"
-              className="bg-gradient-to-br from-black via-creative-yellow to-red-800 text-black px-4 py-3 rounded-3xl text-lg font-medium hover:bg-yellow-500 transition flex items-center space-x-1"
+              className="bg-gradient-to-br from-black via-creative-yellow to-red-800 text-black p-3 rounded-full text-2xl font-medium hover:bg-yellow-500 transition flex items-center justify-center w-12 h-12"
             >
-              <span>Subscribe</span>
               <span>→</span>
             </button>
           </form>
