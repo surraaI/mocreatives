@@ -156,7 +156,7 @@ const BlogPostPage = () => {
       </section>
 
       {/* Buttons Section */}
-      <section className="py-12 px-4 sm:px-16 md:px-20 lg:px-24 bg-black">
+      <section className="py-12 px-4 sm:px-16 md:px-20 lg:px-24 pt-40 pb-20 bg-black">
         <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6 max-w-4xl mx-auto">
           {/* Contact Us Button */}
           <Link
