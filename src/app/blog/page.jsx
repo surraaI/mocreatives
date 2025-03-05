@@ -112,7 +112,7 @@ const BlogPage = () => {
               {currentPosts.map((item, index) => (
                 <div
                   key={index}
-                  className="bg-red-800 rounded-2xl shadow-lg hover:shadow-xl transition hover:scale-105 w-full max-w-full sm:max-w-6xl mx-auto h-56 sm:h-48"
+                  className="bg-red-800 rounded-2xl shadow-sm shadow-yellow-300 hover:shadow-xl transition hover:scale-105 w-full max-w-full sm:max-w-6xl mx-auto h-56 sm:h-48"
                 >
                   <div className="flex flex-col sm:flex-row sm:items-start h-full">
                     {/* Image and Title Container */}
