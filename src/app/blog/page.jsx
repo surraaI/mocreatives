@@ -39,6 +39,13 @@ const BlogPage = () => {
       image: "/assets/blog-image4.jpg",
       slug: "/blog/benefits-of-learning-python",
     },
+    {
+      title: "Why the Mercato’s Marketing Tactics Won’t Cut It",
+      description:
+        "A deep dive into why traditional marketing tactics are outdated in Ethiopia’s booming digital landscape.",
+      image: "/assets/mercato-blog-image.jpg",
+      slug: "/blog/why-mercatos-marketing-tactics-wont-cut-it",
+    },
   ];
 
   useEffect(() => {

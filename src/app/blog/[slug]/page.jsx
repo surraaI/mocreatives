@@ -134,13 +134,13 @@ const BlogPostPage = () => {
 
       {/* Blog Content Section */}
       <section className="py-12 px-4 sm:px-16 md:px-20 lg:px-24">
-        {/* Larger Image */}
+        {/* Wide Rectangular Image */}
         <div className="flex justify-center mb-8">
           <Image
             src={post.image}
             alt={post.title}
-            width={800}
-            height={400}
+            width={1000}
+            height={500}
             className="rounded-lg shadow-lg object-cover w-full max-w-4xl h-auto"
           />
         </div>
