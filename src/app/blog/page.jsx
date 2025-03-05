@@ -132,16 +132,18 @@ const BlogPage = () => {
                     </div>
 
                     {/* Text Content */}
-                    <div className="w-full sm:w-2/3 flex flex-col h-full overflow-hidden max-w-full space-y-3">
-                      <h3 className="hidden sm:block text-lg font-semibold text-white">
-                        {item.title}
-                      </h3>
-                      <p className="text-white sm:line-clamp-2 max-w-full">
-                        {item.description}
-                      </p>
+                    <div className="w-full sm:w-2/3 flex flex-col justify-between h-full overflow-hidden max-w-full space-y-3">
+                      <div>
+                        <h3 className="hidden sm:block text-lg font-semibold text-white">
+                          {item.title}
+                        </h3>
+                        <p className="text-white sm:line-clamp-2 max-w-full">
+                          {item.description}
+                        </p>
+                      </div>
                       <Link
                         href={item.slug}
-                        className="text-creative-yellow text-lg font-medium flex items-center space-x-1 sm:mt-auto shrink-0 max-w-full"
+                        className="text-creative-yellow text-lg font-medium flex items-center space-x-1 shrink-0 max-w-full"
                       >
                         <span className="underline">Read More</span>
                         <span>→</span>
