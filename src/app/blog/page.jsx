@@ -114,7 +114,7 @@ const BlogPage = () => {
                   key={index}
                   className="bg-red-800 rounded-2xl shadow-sm shadow-yellow-300 sm:hover:shadow-xl transition sm:hover:scale-105 w-full max-w-full h-auto sm:h-48 overflow-hidden box-border"
                 >
-                  <div className="flex flex-col sm:flex-row sm:items-start w-full h-full max-w-full px-8 py-6">
+                  <div className="flex flex-col sm:flex-row sm:items-start w-full h-full max-w-full px-6 py-4">
                     {/* Image and Title Container */}
                     <div className="flex items-center space-x-4 sm:w-1/3 sm:block shrink-0 max-w-full">
                       <div className="w-48 h-36 sm:w-64 sm:h-36">
