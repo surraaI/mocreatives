@@ -141,13 +141,20 @@ const BlogPage = () => {
                           {item.description}
                         </p>
                       </div>
-                      <Link
-                        href={item.slug}
-                        className="text-creative-yellow text-lg font-medium flex items-center space-x-1 shrink-0 max-w-full"
+                      <motion.div
+                        initial={{ y: 20, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        transition={{ duration: 0.5, delay: 0.2 }}
+                        className="shrink-0 max-w-full"
                       >
-                        <span className="underline">Read More</span>
-                        <span>→</span>
-                      </Link>
+                        <Link
+                          href={item.slug}
+                          className="text-creative-yellow text-lg font-medium flex items-center space-x-1"
+                        >
+                          <span className="underline">Read More</span>
+                          <span>→</span>
+                        </Link>
+                      </motion.div>
                     </div>
                   </div>
                 </div>
@@ -156,7 +163,7 @@ const BlogPage = () => {
           </motion.div>
 
           {/* Pagination Controls */}
-          <div className="flex justify-center items-center space-x-4 mt-8 max-w-full">
+          <div className="flex justify-center items-center space-x-4 mt-8 pb-8 max-w-full">
             <button
               onClick={() => handlePageChange(currentPage - 1)}
               disabled={currentPage === 1}
