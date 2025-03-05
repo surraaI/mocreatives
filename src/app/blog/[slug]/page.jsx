@@ -161,7 +161,7 @@ const BlogPostPage = () => {
           {/* Contact Us Button */}
           <Link
             href="/contact"
-            className="bg-cultural-red text-white px-6 py-3 rounded-lg text-lg font-medium hover:bg-red-800 transition"
+            className="bg-gradient-to-br from-black via-cultural-red to-red-800 text-white px-6 py-3 rounded-lg text-lg font-medium hover:bg-red-800 transition"
           >
             Contact Us
           </Link>
@@ -169,7 +169,7 @@ const BlogPostPage = () => {
           {/* Other Articles Button */}
           <Link
             href="/blog"
-            className="bg-cultural-red text-white px-6 py-3 rounded-lg text-lg font-medium hover:bg-red-800 transition"
+            className="bg-gradient-to-br from-black via-cultural-red to-red-800 text-white px-6 py-3 rounded-lg text-lg font-medium hover:bg-red-800 transition"
           >
             Other Articles
           </Link>
@@ -184,12 +184,12 @@ const BlogPostPage = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter your email"
-              className="bg-gray-800 text-white px-4 py-3 rounded-lg text-lg focus:outline-none focus:ring-2 focus:ring-creative-yellow"
+              className="bg-gradient-to-br from-black via-cultural-red to-red-800 text-white px-4 py-3 rounded-lg text-lg focus:outline-none focus:ring-2 focus:ring-creative-yellow"
               required
             />
             <button
               type="submit"
-              className="bg-creative-yellow text-black px-4 py-3 rounded-lg text-lg font-medium hover:bg-yellow-500 transition flex items-center space-x-1"
+              className="bg-gradient-to-br from-black via-creative-yellow to-red-800 text-black px-4 py-3 rounded-lg text-lg font-medium hover:bg-yellow-500 transition flex items-center space-x-1"
             >
               <span>Subscribe</span>
               <span>→</span>
