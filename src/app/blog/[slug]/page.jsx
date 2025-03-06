@@ -3,7 +3,8 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useParams } from "next/navigation";
-import { motion } from "framer-motion"; // Import Framer Motion
+import { motion } from "framer-motion";
+import SplitText from "@/components/SplitText"; // Adjust the import path as needed
 
 const blogContent = [
   {
@@ -126,19 +127,27 @@ const BlogPostPage = () => {
       {/* Hero Section (Title and Date) */}
       <section className="bg-gradient-to-br from-black via-cultural-red to-red-800 min-h-[40vh] flex items-center justify-center px-4 py-12">
         <div className="text-center">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold font-sans text-white mt-32 mb-10">
-            {post.title}
-          </h1>
-          <p className="text-gray-400 text-lg">{post.date}</p>
+          <SplitText
+            text={post.title}
+            className="text-3xl sm:text-4xl md:text-5xl font-bold font-sans  text-white mt-32 mb-10 pt-8"
+            delay={50} // Adjust delay between letters
+            animationFrom={{ opacity: 0, transform: "translate3d(0, 40px, 0)" }}
+            animationTo={{ opacity: 1, transform: "translate3d(0, 0, 0)" }}
+            easing="easeOutCubic"
+            threshold={0.1}
+            rootMargin="-100px"
+            textAlign="center"
+          />
+          <p className="text-gray-400 pt-12 text-lg">{post.date}</p>
         </div>
       </section>
 
       {/* Blog Content Section with Motion */}
       <section className="py-12 px-4 sm:px-16 md:px-20 lg:px-24 bg-light-gray">
         <motion.div
-          initial={{ opacity: 0, y: 20 }} // Start slightly below and transparent
-          animate={{ opacity: 1, y: 0 }} // Fade in and slide up to original position
-          transition={{ duration: 0.8, ease: "easeOut" }} // Smooth animation
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
         >
           {/* Wide Rectangular Image with Increased Height */}
           <div className="flex justify-center mb-8">
