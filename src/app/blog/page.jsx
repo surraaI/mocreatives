@@ -77,13 +77,13 @@ const BlogPage = () => {
   return (
     <div className="text-white overflow-x-hidden box-border">
       {/* Hero Section */}
-      <section className="bg-black min-h-[50vh] flex items-center justify-center px-4 overflow-x-hidden">
+      <section className="bg-gradient-to-br from-black via-cultural-red to-red-800 min-h-[50vh] flex items-center justify-center px-4 overflow-x-hidden">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          <h1 className="font-sans text-2xl sm:text-3xl md:text-4xl lg:text-5xl pt-44 font-bold text-center text-cultural-red">
+          <h1 className="font-sans text-2xl sm:text-3xl md:text-4xl lg:text-5xl pt-44 font-bold text-center text-white">
             {title.split(" ").map((word, idx) => (
               <span key={idx}>
                 {word === "MoCreatives" ? (
@@ -99,7 +99,7 @@ const BlogPage = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            <p className="text-center text-red-800 font-sans text-sm sm:text-base md:text-lg mt-2 pt-12 max-w-full">
+            <p className="text-center text-white font-sans text-sm pb-8 sm:text-base md:text-lg mt-2 pt-12 max-w-full">
               A guide for beginners to understand the best programming languages
               to start with.
             </p>
@@ -108,7 +108,7 @@ const BlogPage = () => {
       </section>
 
       {/* Blog Cards Section */}
-      <section className="py-8 px-4 pt-[100px] bg-black overflow-x-hidden box-border">
+      <section className="py-8 px-4 pt-[100px] bg-light-gray overflow-x-hidden box-border">
         <div className="space-y-8 max-w-full">
           <motion.div
             initial={{ opacity: 0, y: -20 }}

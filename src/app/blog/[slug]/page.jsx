@@ -125,7 +125,7 @@ const BlogPostPage = () => {
       {/* Hero Section (Title and Date) */}
       <section className="bg-gradient-to-br from-black via-cultural-red to-red-800 min-h-[40vh] flex items-center justify-center px-4 py-12">
         <div className="text-center">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold font-sans text-creative-yellow mt-32 mb-10">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold font-sans text-white mt-32 mb-10">
             {post.title}
           </h1>
           <p className="text-gray-400 text-lg">{post.date}</p>
