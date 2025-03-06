@@ -125,7 +125,7 @@ const BlogPostPage = () => {
       {/* Hero Section (Title and Date) */}
       <section className="bg-gradient-to-br from-black via-cultural-red to-red-800 min-h-[40vh] flex items-center justify-center px-4 py-12">
         <div className="text-center">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold font-sans text-light-gray mt-32 mb-10">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold font-sans text-creative-yellow mt-32 mb-10">
             {post.title}
           </h1>
           <p className="text-gray-400 text-lg">{post.date}</p>
@@ -133,7 +133,7 @@ const BlogPostPage = () => {
       </section>
 
       {/* Blog Content Section */}
-      <section className="py-12 px-4 sm:px-16 md:px-20 lg:px-24">
+      <section className="py-12 px-4 sm:px-16 md:px-20 lg:px-24 bg-light-gray">
         {/* Wide Rectangular Image with Increased Height */}
         <div className="flex justify-center mb-8">
           <Image
@@ -146,7 +146,7 @@ const BlogPostPage = () => {
         </div>
 
         {/* Blog Content */}
-        <div className="prose prose-invert max-w-4xl mx-auto text-white leading-relaxed">
+        <div className="prose prose-invert max-w-4xl mx-auto text-black leading-relaxed">
           {post.content.split("\n").map((paragraph, index) => (
             <p key={index} className="mb-4">
               {paragraph}
@@ -156,7 +156,7 @@ const BlogPostPage = () => {
       </section>
 
       {/* Buttons Section */}
-      <section className="py-12 px-4 sm:px-16 md:px-20 lg:px-24 pt-40 pb-20 bg-black">
+      <section className="py-12 px-4 sm:px-16 md:px-20 lg:px-24 pt-40 pb-20 bg-light-gray">
         <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6 max-w-4xl mx-auto">
           {/* Contact Us Button */}
           <Link

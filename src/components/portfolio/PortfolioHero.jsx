@@ -6,7 +6,7 @@ const PortfolioHero = () => {
   return (
     <div className="flex flex-col-reverse md:flex-row items-center relative overflow-visible my-20">
       <div className="md:w-1/2 mb-8 md:mb-0 mt-10 md:mt-0">
-        <h1 className="text-5xl font-bold text-cultural-red mb-4">
+        <h1 className="text-5xl font-bold text-white  mb-4">
           Portfolio & Case Studies
         </h1>
         <motion.div
@@ -14,7 +14,7 @@ const PortfolioHero = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.2 }}
         >
-          <p className="text-cultural-red contrast-100 font-sans text-lg leading-relaxed">
+          <p className="text-white contrast-100 font-sans text-lg leading-relaxed">
             Mo Creatives has worked with major financial institutions, tech
             companies, and emerging brands to deliver strategic marketing
             campaigns and digital solutions.
@@ -28,7 +28,7 @@ const PortfolioHero = () => {
         >
           <Link
             href="/services"
-            className="mt-0 md:mt-6 px-10 py-2 bg-red-800 text-black font-semibold text-lg border rounded-3xl shadow-md shadow-red hover:shadow-red-800 transition"
+            className="mt-0 md:mt-6 px-10 py-2 bg-red-800 text-white font-semibold text-lg border rounded-3xl shadow-md shadow-red hover:shadow-red-800 transition"
           >
             View our works
           </Link>

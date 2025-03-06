@@ -22,7 +22,7 @@ const PortfolioTabs = () => {
             className={`relative flex justify-center items-center min-w-[120px] px-6 py-2 transition-all duration-300 ${
               activeTab === tab
                 ? "text-cultural-red"
-                : "text-white hover:text-cultural-red"
+                : "text-creative-yellow hover:text-cultural-red"
             }`}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -49,10 +49,15 @@ const PortfolioTabs = () => {
       <div className="flex flex-col sm:flex-row items-center justify-center mx-auto px-4 text-center">
         <p>
           We deliver{" "}
-          <span className="font-semibold text-white ">innovative</span>
+          <span className="font-semibold text-creative-yellow ">
+            innovative
+          </span>
           <span>and</span>
-          <span className="font-semibold text-white ">impactful</span> results
-          tailored to your needs. Explore our work and level up your brand.
+          <span className="font-semibold text-creative-yellow ">
+            impactful
+          </span>{" "}
+          results tailored to your needs. Explore our work and level up your
+          brand.
         </p>
         <div className="mt-6 sm:mt-0 ml-6">
           <motion.button
