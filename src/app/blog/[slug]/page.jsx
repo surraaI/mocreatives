@@ -3,6 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useParams } from "next/navigation";
+import { motion } from "framer-motion"; // Import Framer Motion
 
 const blogContent = [
   {
@@ -132,27 +133,33 @@ const BlogPostPage = () => {
         </div>
       </section>
 
-      {/* Blog Content Section */}
+      {/* Blog Content Section with Motion */}
       <section className="py-12 px-4 sm:px-16 md:px-20 lg:px-24 bg-light-gray">
-        {/* Wide Rectangular Image with Increased Height */}
-        <div className="flex justify-center mb-8">
-          <Image
-            src={post.image}
-            alt={post.title}
-            width={1000}
-            height={400}
-            className="rounded-lg shadow-lg object-cover w-full max-w-4xl h-[400px]"
-          />
-        </div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }} // Start slightly below and transparent
+          animate={{ opacity: 1, y: 0 }} // Fade in and slide up to original position
+          transition={{ duration: 0.8, ease: "easeOut" }} // Smooth animation
+        >
+          {/* Wide Rectangular Image with Increased Height */}
+          <div className="flex justify-center mb-8">
+            <Image
+              src={post.image}
+              alt={post.title}
+              width={1000}
+              height={400}
+              className="rounded-lg shadow-lg object-cover w-full max-w-4xl h-[400px]"
+            />
+          </div>
 
-        {/* Blog Content */}
-        <div className="prose prose-invert max-w-4xl mx-auto text-black leading-relaxed">
-          {post.content.split("\n").map((paragraph, index) => (
-            <p key={index} className="mb-4">
-              {paragraph}
-            </p>
-          ))}
-        </div>
+          {/* Blog Content */}
+          <div className="prose prose-invert max-w-4xl mx-auto text-black leading-relaxed">
+            {post.content.split("\n").map((paragraph, index) => (
+              <p key={index} className="mb-4">
+                {paragraph}
+              </p>
+            ))}
+          </div>
+        </motion.div>
       </section>
 
       {/* Buttons Section */}
