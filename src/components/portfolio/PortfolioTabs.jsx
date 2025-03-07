@@ -22,7 +22,7 @@ const PortfolioTabs = () => {
             className={`relative flex justify-center items-center min-w-[120px] px-6 py-2 transition-all duration-300 ${
               activeTab === tab
                 ? "text-cultural-red"
-                : "text-creative-yellow hover:text-cultural-red"
+                : "text-black hover:text-cultural-red"
             }`}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -49,12 +49,12 @@ const PortfolioTabs = () => {
       <div className="flex flex-col sm:flex-row items-center justify-center mx-auto px-4 text-center">
         <p>
           We deliver{" "}
-          <span className="font-semibold text-creative-yellow ">
-            innovative
+          <span className="font-semibold text-black ">
+            innovative 
           </span>
-          <span>and</span>
-          <span className="font-semibold text-creative-yellow ">
-            impactful
+          <span>and </span>
+          <span className="font-semibold text-black ">
+            impactful 
           </span>{" "}
           results tailored to your needs. Explore our work and level up your
           brand.
@@ -84,7 +84,7 @@ const PortfolioTabs = () => {
               transition={{ duration: 1 }}
             >
               <div
-                className={`relative bg-red-800 rounded-2xl p-6 shadow-sm shadow-creative-yellow hover:shadow-black transition hover:scale-105 w-full mx-auto min-h-[280px] 
+                className={`relative bg-red-800 rounded-2xl p-6 shadow-sm shadow-black hover:shadow-black transition hover:scale-105 w-full mx-auto min-h-[280px] 
             flex flex-col sm:flex-row sm:items-center 
             ${!isLeftCard ? "sm:flex-row-reverse" : ""}`}
               >
