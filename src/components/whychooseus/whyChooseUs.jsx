@@ -2,7 +2,7 @@ import { whyChooseUsData } from "@/data/whyChooseUsData";
 
 const WhyChooseUs = () => {
   return (
-    <section className="bg-black text-white py-16 px-6 md:px-12">
+    <section className=" bg-gradient-to-br from-red-800 via-cultural-red to-black text-white py-16 px-6 md:px-12">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-yellow-400">
           Why Choose Mo Creatives?
@@ -16,7 +16,7 @@ const WhyChooseUs = () => {
         {whyChooseUsData.map((feature, index) => (
           <div
             key={index}
-            className="flex items-start space-x-4 p-4 border border-gray-700 rounded-lg shadow-sm shadow-red-600"
+            className="flex items-start space-x-4 p-4 bg-black border border-gray-700 rounded-lg shadow-sm shadow-creative-yellow"
           >
             <feature.icon className={`w-10 h-10 ${feature.color}`} />
             <div>

@@ -8,7 +8,7 @@ const PortfolioTabs = () => {
   const tabs = Object.keys(portfolioData);
 
   return (
-    <section className="text-tech-grey py-16 px-4">
+    <section className="text-cultural-red py-16 px-4">
       <motion.div
         className="flex justify-center gap-4 text-xl font-bold mb-6 px-4"
         initial={{ opacity: 0 }}
@@ -21,8 +21,8 @@ const PortfolioTabs = () => {
             onClick={() => setActiveTab(tab)}
             className={`relative flex justify-center items-center min-w-[120px] px-6 py-2 transition-all duration-300 ${
               activeTab === tab
-                ? "text-neuro-blue"
-                : "text-gray-500 hover:text-neuro-blue"
+                ? "text-cultural-red"
+                : "text-black hover:text-cultural-red"
             }`}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -34,7 +34,7 @@ const PortfolioTabs = () => {
               <motion.span
                 className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-0 h-0 
       border-l-8 border-r-8 border-b-8 border-transparent
-      border-b-neuro-blue"
+      border-b-cultural-red"
                 layoutId="tab-highlight"
                 initial={{ opacity: 0, scale: 0 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -44,26 +44,30 @@ const PortfolioTabs = () => {
           </motion.button>
         ))}
       </motion.div>
-      <hr className="border-t-4 border-t-neuro-blue mb-14 -mt-2 md:w-1/2 mx-auto" />
+      <hr className="border-t-4 border-t-cultural-red mb-14 -mt-2 md:w-1/2 mx-auto" />
 
       <div className="flex flex-col sm:flex-row items-center justify-center mx-auto px-4 text-center">
         <p>
           We deliver{" "}
-          <span className="font-semibold text-neuro-blue">innovative</span>
-          <span>and</span>
-          <span className="font-semibold text-neuro-blue">impactful</span>{" "}
+          <span className="font-semibold text-black ">
+            innovative 
+          </span>
+          <span>and </span>
+          <span className="font-semibold text-black ">
+            impactful 
+          </span>{" "}
           results tailored to your needs. Explore our work and level up your
           brand.
         </p>
         <div className="mt-6 sm:mt-0 ml-6">
           <motion.button
-            className="relative px-6 py-2 bg-blue-600 text-white font-semibold rounded-full overflow-hidden group"
+            className="relative px-6 py-2 bg-cultural-red text-white font-semibold rounded-full overflow-hidden group"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             transition={{ duration: 0.2 }}
           >
             <span className="relative z-10">Contact Us</span>
-            <span className="absolute inset-0 bg-blue-700 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300"></span>
+            <span className="absolute inset-0 bg-cultural-red scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300"></span>
           </motion.button>
         </div>
       </div>
@@ -80,7 +84,7 @@ const PortfolioTabs = () => {
               transition={{ duration: 1 }}
             >
               <div
-                className={`relative bg-neuro-blue rounded-2xl p-6 shadow-lg hover:shadow-black transition hover:scale-105 w-full mx-auto min-h-[280px] 
+                className={`relative bg-red-800 rounded-2xl p-6 shadow-sm shadow-black hover:shadow-black transition hover:scale-105 w-full mx-auto min-h-[280px] 
             flex flex-col sm:flex-row sm:items-center 
             ${!isLeftCard ? "sm:flex-row-reverse" : ""}`}
               >

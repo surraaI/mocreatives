@@ -6,7 +6,7 @@ const PortfolioHero = () => {
   return (
     <div className="flex flex-col-reverse md:flex-row items-center relative overflow-visible my-20">
       <div className="md:w-1/2 mb-8 md:mb-0 mt-10 md:mt-0">
-        <h1 className="text-5xl font-bold text-white mb-4">
+        <h1 className="text-5xl font-bold text-white  mb-4">
           Portfolio & Case Studies
         </h1>
         <motion.div
@@ -27,8 +27,8 @@ const PortfolioHero = () => {
           className="flex gap-4 mt-6"
         >
           <Link
-            href="/works"
-            className="mt-0 md:mt-6 px-10 py-2 bg-white text-blue-500 font-semibold text-lg border rounded-3xl shadow-md shadow-white hover:shadow-white transition"
+            href="/services"
+            className="mt-0 md:mt-6 px-10 py-2 bg-red-800 text-white font-semibold text-lg border rounded-3xl shadow-md shadow-red hover:shadow-red-800 transition"
           >
             View our works
           </Link>
