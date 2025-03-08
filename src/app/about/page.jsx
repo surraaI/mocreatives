@@ -2,21 +2,31 @@
 import Footer from "@/components/footer";
 import { Title, Text, Container, Grid, Card, Image, AspectRatio } from "@mantine/core";
 import { motion } from "framer-motion";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, Target, Eye, ShieldCheck } from "lucide-react";
+
+// Color constants for consistency
+const colors = {
+  primaryRed: "#D72638",
+  darkAccent: "#0A0A0A",
+  lightAccent: "#F5F5F5",
+  gold: "#FFD700"
+};
 
 const aboutCards = [
   {
-    image: "/assets/mission.jpg",
+    icon: Target,
     title: "Our Mission",
-    description: "To craft transformative brand experiences by combining marketing, training, and digital innovation to drive sustainable business growth."
+    description: "To craft transformative brand experiences by combining marketing, training, and digital innovation to drive sustainable business growth.",
+    color: colors.primaryRed
   },
   {
-    image: "/assets/vision.jpg",
+    icon: Eye,
     title: "Our Vision",
-    description: "To be the leading storytelling and digital transformation agency in Ethiopia, empowering businesses through strategic marketing and innovation."
+    description: "To be the leading storytelling and digital transformation agency in Ethiopia, empowering businesses through strategic marketing and innovation.",
+    color: colors.darkAccent
   },
   {
-    image: "/assets/values.jpg",
+    icon: ShieldCheck,
     title: "Core Values",
     description: [
       "✅ Innovation - Embrace emerging trends & technologies",
@@ -24,9 +34,38 @@ const aboutCards = [
       "✅ Creativity - Develop unique & compelling narratives",
       "✅ Integrity - Maintain ethical professional standards",
       "✅ Client-Centric - Custom solutions for maximum impact"
-    ]
+    ],
+    color: colors.primaryRed
   }
 ];
+
+// Animation configurations
+const cardVariants = {
+  hover: {
+    scale: 1.05,
+    transition: { 
+      type: "spring",
+      stiffness: 300,
+      damping: 10
+    }
+  }
+};
+
+const descVariants = {
+  hidden: { 
+    opacity: 0,
+    y: 20,
+    transition: { duration: 0.2 } 
+  },
+  visible: { 
+    opacity: 1,
+    y: 0,
+    transition: { 
+      duration: 0.3,
+      delay: 0.2 
+    } 
+  }
+};
 
 const teamMembers = [
   { 
@@ -43,17 +82,17 @@ const teamMembers = [
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <div className="relative w-full h-[90vh] overflow-hidden bg-gradient-to-br from-neuro-blue via-white to-creative-yellow">
+      {/* Enhanced Hero Section */}
+      <div className="relative w-full h-[90vh] overflow-hidden bg-gradient-to-br from-red-800 via-cultural-red to-black">
         <div className="absolute inset-0 bg-[url('/assets/grid.jpg')] opacity-10 mix-blend-overlay" />
         
-        {/* Floating Elements */}
+        {/* Animated Particles */}
         {[...Array(20)].map((_, i) => (
           <motion.div
             key={i}
             className="absolute w-2 h-2 rounded-full"
             style={{
-              background: Math.random() > 0.5 ? '#FFD166' : '#3A86FF',
+              background: Math.random() > 0.5 ? colors.gold : colors.primaryRed,
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`
             }}
@@ -71,56 +110,32 @@ export default function AboutPage() {
           />
         ))}
 
-        <Container size="xl" className="h-full">
-          <Grid gutter="xl" align="center" className="h-full">
-            <Grid.Col span={{ base: 12, md: 6 }} className="relative z-10">
-              <motion.div
-                initial={{ opacity: 0, y: 40 }}
-                animate={{ opacity: 1, y: 0 }}
-                className="text-left"
-              >
-                <Text className="text-cultural-red uppercase font-semibold tracking-wider mb-4">
-                  Pioneering Ethiopian Innovation
-                </Text>
-                
-                <Title className="text-5xl md:text-7xl font-black mb-6 tracking-tighter font-lato leading-tight">
-                  <span className="text-neuro-blue">ABOUT</span>{' '}
-                  <span className="text-cultural-red">US</span>
-                </Title>
+        <Container size="xl" className="h-full flex items-center justify-center">
+          <div className="max-w-4xl text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <Text className={`text-[${colors.gold}] uppercase font-semibold tracking-wider mb-6`}>
+                Pioneering Ethiopian Innovation
+              </Text>
+              
+              <Title className="text-5xl md:text-7xl font-black mb-8 tracking-tighter leading-tight">
+                <span className="text-black">ABOUT</span>{' '}
+                <span className="text-white">US</span>
+              </Title>
 
-                <Text className="text-xl md:text-2xl text-tech-grey font-medium font-open-sans max-w-xl mb-8">
-                  Transforming brands through innovative storytelling and digital mastery since 2023
-                </Text>
-              </motion.div>
-            </Grid.Col>
-
-            <Grid.Col span={{ base: 12, md: 6 }} className="relative">
-              <motion.div
-                initial={{ opacity: 0, x: 100 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
-                className="relative h-[600px]"
-              >
-                <div className="absolute inset-0 bg-gradient-to-r from-neuro-blue/10 to-creative-yellow/10 -rotate-6 rounded-3xl transform scale-105" />
-                <img
-                  src="/assets/creative.jpg"
-                  alt="Mo Creatives Team"
-                  className="absolute inset-0 w-full h-full object-cover object-right rounded-2xl transform rotate-1 shadow-2xl"
-                />
-                <div className="absolute -left-12 bottom-20 bg-white p-4 rounded-xl shadow-lg">
-                  <div className="bg-neuro-blue text-white p-3 rounded-lg text-center">
-                    <Text className="text-2xl font-bold">20+</Text>
-                    <Text className="text-sm">Successful Projects</Text>
-                  </div>
-                </div>
-              </motion.div>
-            </Grid.Col>
-          </Grid>
+              <Text className="text-xl md:text-2xl text-gray-200 font-medium max-w-2xl mx-auto mb-12">
+                Transforming brands through innovative storytelling and digital mastery since 2023
+              </Text>
+            </motion.div>
+          </div>
         </Container>
       </div>
 
-      {/* Company History */}
-      <Container size="xl" className="py-20 px-4 sm:px-6">
+      {/* Company History Section */}
+      <Container size="xl" className="py-20 px-4 sm:px-6 bg-white">
         <Grid gutter="xl" className="mb-20">
           <Grid.Col span={{ base: 12, md: 6 }}>
             <motion.div
@@ -129,7 +144,7 @@ export default function AboutPage() {
               className="relative rounded-2xl overflow-hidden shadow-xl"
             >
               <AspectRatio ratio={16/9}>
-                <img
+                <Image
                   src="/assets/about-hero.jpg"
                   alt="Mo Creatives Headquarters"
                   className="w-full h-full object-cover"
@@ -141,14 +156,15 @@ export default function AboutPage() {
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
+              className="flex flex-col justify-center h-full"
             >
-              <Title order={2} className="text-3xl md:text-4xl text-tech-grey mb-6 font-lato">
+              <Title order={2} className={`text-3xl md:text-4xl text-[${colors.darkAccent}] mb-6`}>
                 Our Ethiopian Journey
               </Title>
-              <Text className="text-lg text-tech-grey mb-4">
+              <Text className="text-lg text-gray-600 mb-4">
                 Founded in October 2023 in the heart of Finfinne (Addis Ababa), Mo Creatives has rapidly become a catalyst for digital transformation in Ethiopia. As a Private Limited Company (PLC), we combine global expertise with local cultural insights.
               </Text>
-              <Text className="text-lg text-tech-grey">
+              <Text className="text-lg text-gray-600">
                 From our first campaign with local businesses to partnering with major financial institutions, we've remained committed to elevating Ethiopian brands through innovative marketing and digital solutions.
               </Text>
             </motion.div>
@@ -157,25 +173,29 @@ export default function AboutPage() {
       </Container>
 
       {/* Mission/Vision/Values Cards */}
-      <Container size="xl" className="py-20 px-4 sm:px-6 bg-[#F9FAFB]">
+      <Container size="xl" className="py-20 px-4 sm:px-6 bg-[#FAFAFA]">
         <Grid gutter="xl" className="mb-20">
           {aboutCards.map((card, index) => (
             <Grid.Col key={index} span={{ base: 12, md: 4 }}>
               <motion.div
-                whileHover={{ scale: 1.05 }}
-                className="relative h-[400px] rounded-2xl overflow-hidden shadow-xl group cursor-pointer"
+                variants={cardVariants}
+                whileHover="hover"
+                className="relative h-[400px] rounded-2xl overflow-hidden shadow-xl cursor-pointer group"
+                style={{ backgroundColor: card.color }}
               >
-                <Image
-                  src={card.image}
-                  alt={card.title}
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                <div className="absolute inset-0 p-6 flex flex-col justify-end">
-                  <Title order={3} className="text-white text-2xl mb-2">{card.title}</Title>
+                <div className="p-8 h-full flex flex-col items-center text-center">
+                  <div className="mb-6 p-4 bg-white/20 rounded-full">
+                    <card.icon className="w-12 h-12 text-white" />
+                  </div>
+                  <Title order={3} className="text-white text-2xl mb-4">
+                    {card.title}
+                  </Title>
+                  
                   <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileHover={{ opacity: 1, y: 0 }}
+                    initial="hidden"
+                    animate="hidden"
+                    whileHover="visible"
+                    variants={descVariants}
                     className="text-white text-lg"
                   >
                     {Array.isArray(card.description) ? (
@@ -195,26 +215,9 @@ export default function AboutPage() {
         </Grid>
       </Container>
 
-      {/* Full Team Photo */}
-      <Container size="xl" className="py-20 px-4 sm:px-6">
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          className="mb-20"
-        >
-          <AspectRatio ratio={16/6}>
-            <Image
-              src="/assets/team.jpg"
-              alt="Mo Creatives Full Team"
-              className="rounded-2xl shadow-xl object-cover"
-            />
-          </AspectRatio>
-        </motion.div>
-      </Container>
-
-      {/* Leadership Team */}
-      <Container size="xl" className="py-20 px-4 sm:px-6 bg-[#F9FAFB]">
-        <Title order={2} className="text-3xl md:text-4xl text-tech-grey mb-16 text-center font-lato">
+      {/* Leadership Team Section */}
+      <Container size="xl" className="py-20 px-4 sm:px-6 bg-white">
+        <Title order={2} className={`text-3xl md:text-4xl text-[${colors.darkAccent}] mb-16 text-center`}>
           Leadership Team
         </Title>
 
@@ -224,7 +227,7 @@ export default function AboutPage() {
               <Card 
                 shadow="md" 
                 padding="lg" 
-                className={`border-0 rounded-2xl ${index === 0 ? 'bg-neuro-blue/10' : 'bg-white'}`}
+                className={`border-0 rounded-2xl ${index === 0 ? 'bg-[#F8F9FA]' : 'bg-white'} hover:shadow-xl transition-shadow`}
               >
                 <Grid gutter="xl">
                   <Grid.Col span={{ base: 12, md: index === 0 ? 4 : 12 }}>
@@ -232,20 +235,26 @@ export default function AboutPage() {
                       <Image
                         src={member.image}
                         alt={member.name}
-                        className="rounded-xl"
+                        className="rounded-xl object-cover"
                       />
                     </AspectRatio>
                   </Grid.Col>
                   <Grid.Col span={{ base: 12, md: index === 0 ? 8 : 12 }}>
                     <div className={index === 0 ? "md:pt-8" : ""}>
-                      <Title order={4} className="text-tech-grey text-xl">{member.name}</Title>
-                      <Text className="text-cultural-red mb-2">{member.role}</Text>
+                      <Title order={4} className={`text-[${colors.darkAccent}] text-xl`}>
+                        {member.name}
+                      </Title>
+                      <Text className={`text-[${colors.primaryRed}] mb-2`}>
+                        {member.role}
+                      </Text>
                       {member.bio && (
-                        <Text className="text-tech-grey text-sm">{member.bio}</Text>
+                        <Text className="text-gray-600 text-sm">
+                          {member.bio}
+                        </Text>
                       )}
                       <motion.div
                         whileHover={{ x: 5 }}
-                        className="text-tech-grey mt-4 flex items-center gap-2"
+                        className={`text-[${colors.primaryRed}] mt-4 flex items-center gap-2 hover:text-[${colors.darkAccent}] transition-colors`}
                       >
                         <ChevronRight size={16} />
                         <span>View Profile</span>
@@ -258,8 +267,6 @@ export default function AboutPage() {
           ))}
         </Grid>
       </Container>
-
-      
     </div>
   );
 }
