@@ -3,6 +3,7 @@ import Footer from "@/components/footer";
 import { Title, Text, Container, Grid, List, Button } from "@mantine/core";
 import { motion } from "framer-motion";
 import { ChevronRight } from "lucide-react";
+import Link from "next/link";
 
 const services = [
   {
@@ -43,7 +44,7 @@ export default function ServicesPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <div className="relative w-full h-[90vh] overflow-hidden bg-gradient-to-br from-neuro-blue via-white to-creative-yellow">
+      <div className="relative w-full h-[90vh] overflow-hidden bg-gradient-to-br from-red-800 via-cultural-red to-black">
         <div className="absolute inset-0 bg-[url('/assets/grid.jpg')] opacity-10 mix-blend-overlay" />
         
         {/* Floating Elements */}
@@ -83,8 +84,8 @@ export default function ServicesPage() {
                 </Text>
                 
                 <Title className="text-5xl md:text-7xl font-black mb-6 tracking-tighter font-lato leading-tight">
-                  <span className="text-neuro-blue">OUR CORE</span>{' '}
-                  <span className="text-cultural-red">SERVICES</span>
+                  <span className="text-white">OUR CORE</span>{' '}
+                  <span className="text-black">SERVICES</span>
                 </Title>
 
                 <Text className="text-xl md:text-2xl text-tech-grey font-medium font-open-sans max-w-xl mb-8">
@@ -98,11 +99,13 @@ export default function ServicesPage() {
                     transition={{ delay: 0.5 }}
                   >
                     <Button
+                      component={Link}
+                      href="/portfolio"
                       size="xl"
-                      className="bg-neuro-blue hover:bg-[#2F6ECD] transition-colors font-lato group"
+                      className="bg-cultural-red hover:bg-[#FFD166] transition-colors font-lato group"
                       rightSection={<ChevronRight size={20} className="transition-transform group-hover:translate-x-1" />}
                     >
-                      Explore Possibilities
+                      View Our Works
                     </Button>
                   </motion.div>
                   <Text className="text-cultural-red font-semibold hidden sm:block">
@@ -119,14 +122,14 @@ export default function ServicesPage() {
                 transition={{ duration: 0.8 }}
                 className="relative h-[600px]"
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-neuro-blue/10 to-creative-yellow/10 -rotate-6 rounded-3xl transform scale-105" />
+                <div className="absolute inset-0 bg-gradient-to-r from-cultural-red/10 to-creative-yellow/10 -rotate-6 rounded-3xl transform scale-105" />
                 <img
                   src="/assets/services.jpg"
                   alt="Digital Solutions"
                   className="absolute inset-0 w-full h-full object-contain object-right rounded-2xl transform rotate-1 shadow-2xl"
                 />
                 <div className="absolute -left-12 bottom-20 bg-white p-4 rounded-xl shadow-lg">
-                  <div className="bg-neuro-blue text-white p-3 rounded-lg text-center">
+                  <div className="bg-cultural-red text-white p-3 rounded-lg text-center">
                     <Text className="text-2xl font-bold">200+</Text>
                     <Text className="text-sm">Successful Projects</Text>
                   </div>
@@ -162,7 +165,7 @@ export default function ServicesPage() {
               <motion.div
                 initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                className="relative overflow-hidden rounded-2xl aspect-video shadow-xl hover:shadow-neuro-blue/20 transition-all"
+                className="relative overflow-hidden rounded-2xl aspect-video shadow-xl hover:shadow-cultural-red/20 transition-all"
               >
                 <img
                   src={service.image}
@@ -183,13 +186,13 @@ export default function ServicesPage() {
                   <Title order={2} className="text-3xl md:text-4xl text-tech-grey mb-2 font-lato">
                     {service.title}
                   </Title>
-                  <div className="h-1 w-20 bg-gradient-to-r from-neuro-blue to-creative-yellow rounded-full" />
+                  <div className="h-1 w-20 bg-gradient-to-r from-cultural-red to-creative-yellow rounded-full" />
                 </div>
                 
                 <List 
                   spacing="md" 
                   size="lg" 
-                  icon={<ChevronRight size={16} className="text-neuro-blue" />} 
+                  icon={<ChevronRight size={16} className="text-cultural-red" />} 
                   className="mb-8 font-open-sans"
                 >
                   {service.items.map((item, itemIndex) => (
@@ -202,13 +205,13 @@ export default function ServicesPage() {
                   ))}
                 </List>
 
-                <Button
+                {/* <Button
                   rightSection={<ChevronRight size={18} className="transition-transform group-hover:translate-x-1" />}
                   size="lg"
-                  className="bg-neuro-blue hover:bg-[#2F6ECD] group font-lato"
+                  className="bg-cultural-red hover:bg-[#FFD166] group font-lato"
                 >
                   Explore Service
-                </Button>
+                </Button> */}
               </motion.div>
             </Grid.Col>
           </Grid>
