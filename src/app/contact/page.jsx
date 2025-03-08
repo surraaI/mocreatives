@@ -4,11 +4,19 @@ import { Title, Text, Container, Grid, Card, TextInput, Textarea, Select, Button
 import { motion } from "framer-motion";
 import { ChevronRight, Mail, Phone, MapPin, Linkedin, Twitter, Instagram } from "lucide-react";
 
+// Color constants matching AboutPage
+const colors = {
+  primaryRed: "#D72638",
+  darkAccent: "#0A0A0A",
+  lightAccent: "#F5F5F5",
+  gold: "#FFD700"
+};
+
 export default function ContactPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <div className="relative w-full h-[70vh] min-h-[500px] overflow-hidden bg-gradient-to-br from-neuro-blue via-white to-creative-yellow">
+      <div className="relative w-full h-[70vh] min-h-[500px] overflow-hidden bg-gradient-to-br from-red-800 via-cultural-red to-black">
         <div className="absolute inset-0 bg-[url('/assets/grid.jpg')] opacity-10 mix-blend-overlay" />
         
         {/* Floating Elements */}
@@ -17,7 +25,7 @@ export default function ContactPage() {
             key={i}
             className="absolute w-2 h-2 rounded-full"
             style={{
-              background: Math.random() > 0.5 ? '#FFD166' : '#3A86FF',
+              background: Math.random() > 0.5 ? colors.gold : colors.primaryRed,
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`
             }}
@@ -41,16 +49,16 @@ export default function ContactPage() {
             animate={{ opacity: 1, y: 0 }}
             className="text-center max-w-3xl px-4 w-full"
           >
-            <Text className="text-cultural-red uppercase font-semibold tracking-wider mb-4">
+            <Text className={`text-[${colors.gold}] uppercase font-semibold tracking-wider mb-4`}>
               Let's Build Something Amazing
             </Text>
             
-            <Title className="text-5xl md:text-7xl font-black mb-6 tracking-tighter font-lato leading-tight">
-              <span className="text-neuro-blue">CONNECT</span>{' '}
-              <span className="text-cultural-red">WITH US</span>
+            <Title className="text-5xl md:text-7xl font-black mb-6 tracking-tighter leading-tight">
+              <span className="text-[${colors.primaryRed}]">CONNECT</span>{' '}
+              <span className="text-white">WITH US</span>
             </Title>
 
-            <Text className="text-xl md:text-2xl text-tech-grey font-medium font-open-sans mb-8 mx-auto max-w-2xl">
+            <Text className="text-xl md:text-2xl text-gray-200 font-medium mb-8 mx-auto max-w-2xl">
               Whether you have a project in mind or just want to chat about digital possibilities - we're all ears.
             </Text>
           </motion.div>
@@ -67,28 +75,28 @@ export default function ContactPage() {
               whileInView={{ opacity: 1, x: 0 }}
               className="space-y-6"
             >
-              <Card className="bg-neuro-blue/10 rounded-2xl border-0">
+              <Card className={`bg-[${colors.primaryRed}/10] rounded-2xl border-0`}>
                 <div className="flex items-start gap-4">
-                  <div className="p-3 bg-neuro-blue rounded-lg text-white">
+                  <div className={`p-3 bg-[${colors.primaryRed}] rounded-lg text-white`}>
                     <MapPin size={24} />
                   </div>
                   <div>
-                    <Title order={3} className="text-tech-grey mb-2">Our Headquarters</Title>
-                    <Text className="text-tech-grey">
+                    <Title order={3} className={`text-[${colors.darkAccent}] mb-2`}>Our Headquarters</Title>
+                    <Text className="text-gray-600">
                       Finfinne (Addis Ababa), Ethiopia
                     </Text>
                   </div>
                 </div>
               </Card>
 
-              <Card className="bg-cultural-red/10 rounded-2xl border-0">
+              <Card className={`bg-[${colors.darkAccent}/10] rounded-2xl border-0`}>
                 <div className="flex items-start gap-4">
-                  <div className="p-3 bg-cultural-red rounded-lg text-white">
+                  <div className={`p-3 bg-[${colors.darkAccent}] rounded-lg text-white`}>
                     <Phone size={24} />
                   </div>
                   <div>
-                    <Title order={3} className="text-tech-grey mb-2">Call Us</Title>
-                    <Text className="text-tech-grey">
+                    <Title order={3} className={`text-[${colors.darkAccent}] mb-2`}>Call Us</Title>
+                    <Text className="text-gray-600">
                       +251-XXX-XXX-XXX<br/>
                       Mon-Fri: 8:30 AM - 5:30 PM EAT
                     </Text>
@@ -96,14 +104,14 @@ export default function ContactPage() {
                 </div>
               </Card>
 
-              <Card className="bg-creative-yellow/10 rounded-2xl border-0">
+              <Card className={`bg-[${colors.primaryRed}/10] rounded-2xl border-0`}>
                 <div className="flex items-start gap-4">
-                  <div className="p-3 bg-creative-yellow rounded-lg text-white">
+                  <div className={`p-3 bg-[${colors.primaryRed}] rounded-lg text-white`}>
                     <Mail size={24} />
                   </div>
                   <div>
-                    <Title order={3} className="text-tech-grey mb-2">Email Us</Title>
-                    <Text className="text-tech-grey">
+                    <Title order={3} className={`text-[${colors.darkAccent}] mb-2`}>Email Us</Title>
+                    <Text className="text-gray-600">
                       info@mocreatives.com<br/>
                       support@mocreatives.com
                     </Text>
@@ -112,26 +120,26 @@ export default function ContactPage() {
               </Card>
 
               <div className="mt-8">
-                <Title order={4} className="text-tech-grey mb-4">Follow Us</Title>
+                <Title order={4} className={`text-[${colors.darkAccent}] mb-4`}>Follow Us</Title>
                 <div className="flex gap-4">
                   <Button
                     leftSection={<Linkedin size={18} />}
                     variant="outline"
-                    className="border-tech-grey text-tech-grey hover:bg-neuro-blue/10"
+                    className={`border-[${colors.primaryRed}] text-[${colors.primaryRed}] hover:bg-[${colors.primaryRed}/10`}
                   >
                     LinkedIn
                   </Button>
                   <Button
                     leftSection={<Twitter size={18} />}
                     variant="outline"
-                    className="border-tech-grey text-tech-grey hover:bg-cultural-red/10"
+                    className={`border-[${colors.darkAccent}] text-[${colors.darkAccent}] hover:bg-[${colors.darkAccent}/10`}
                   >
                     Twitter
                   </Button>
                   <Button
                     leftSection={<Instagram size={18} />}
                     variant="outline"
-                    className="border-tech-grey text-tech-grey hover:bg-creative-yellow/10"
+                    className={`border-[${colors.primaryRed}] text-[${colors.primaryRed}] hover:bg-[${colors.primaryRed}/10`}
                   >
                     Instagram
                   </Button>
@@ -147,7 +155,7 @@ export default function ContactPage() {
               whileInView={{ opacity: 1, x: 0 }}
               className="bg-white p-8 rounded-2xl shadow-xl border border-gray-100"
             >
-              <Title order={2} className="text-3xl text-tech-grey mb-8 font-lato">
+              <Title order={2} className={`text-3xl text-[${colors.darkAccent}] mb-8`}>
                 Send Us a Message
               </Title>
 
@@ -160,7 +168,7 @@ export default function ContactPage() {
                       size="md"
                       required
                       classNames={{
-                        input: "rounded-lg border-gray-200 focus:border-neuro-blue"
+                        input: `rounded-lg border-gray-200 focus:border-[${colors.primaryRed}]`
                       }}
                     />
                   </Grid.Col>
@@ -171,7 +179,7 @@ export default function ContactPage() {
                       size="md"
                       required
                       classNames={{
-                        input: "rounded-lg border-gray-200 focus:border-neuro-blue"
+                        input: `rounded-lg border-gray-200 focus:border-[${colors.primaryRed}]`
                       }}
                     />
                   </Grid.Col>
@@ -191,7 +199,7 @@ export default function ContactPage() {
                   size="md"
                   required
                   classNames={{
-                    input: "rounded-lg border-gray-200 focus:border-neuro-blue"
+                    input: `rounded-lg border-gray-200 focus:border-[${colors.primaryRed}]`
                   }}
                 />
 
@@ -202,13 +210,13 @@ export default function ContactPage() {
                   size="md"
                   required
                   classNames={{
-                    input: "rounded-lg border-gray-200 focus:border-neuro-blue"
+                    input: `rounded-lg border-gray-200 focus:border-[${colors.primaryRed}]`
                   }}
                 />
 
                 <Button
                   size="xl"
-                  className="bg-neuro-blue hover:bg-[#2F6ECD] transition-colors font-lato group mt-6"
+                  className={`bg-[${colors.primaryRed}] hover:bg-[#B51D2E] transition-colors mt-6`}
                   rightSection={<ChevronRight size={20} className="transition-transform group-hover:translate-x-1" />}
                   type="submit"
                 >
@@ -221,7 +229,7 @@ export default function ContactPage() {
       </Container>
 
       {/* Map Section */}
-      <div className="bg-[#F9FAFB] py-20">
+      <div className="bg-[#FAFAFA] py-20">
         <Container size="xl" className="px-4 sm:px-6">
           <motion.div
             initial={{ opacity: 0 }}
@@ -240,7 +248,6 @@ export default function ContactPage() {
           </motion.div>
         </Container>
       </div>
-
     </div>
   );
 }
